@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERITRON GLOBAL | Professional Training & International Certification</title>
+  <meta name="description" content="Empowering Professionals. Advancing Global Standards. Premier ISO, Artificial Intelligence, Cybersecurity, Automotive, and Quality Auditor Training.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#102B46',
+              navyDark: '#0B1D30',
+              navyLight: '#183D61',
+              teal: '#087F8C',
+              tealHover: '#066570',
+              mint: '#65D6C4',
+              mintLight: '#E8FAF7',
+              charcoal: '#1E293B',
+              slateBg: '#F1F5F9',
+              warmAccent: '#F26419'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Manrope"', 'sans-serif']
+          },
+          boxShadow: {
+            'card': '0 10px 30px -5px rgba(16, 43, 70, 0.08), 0 0 1px 1px rgba(16, 43, 70, 0.04)',
+            'card-hover': '0 20px 40px -10px rgba(16, 43, 70, 0.15), 0 0 1px 1px rgba(8, 127, 140, 0.2)',
+            'glow': '0 0 25px rgba(101, 214, 196, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      color: #1E293B;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Manrope', sans-serif;
+    }
+    .hero-gradient {
+      background: radial-gradient(135% 100% at 90% 10%, #183D61 0%, #102B46 60%, #0B1D30 100%);
+    }
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(8, 127, 140, 0.2);
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #087F8C;
+      border-radius: 4px;
+    }
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- TOP ANNOUNCEMENT BAR (Editable from Admin) -->
+  <div id="promo-banner" class="bg-gradient-to-r from-brand-navyDark via-brand-teal to-brand-navy py-2.5 px-4 text-white text-xs sm:text-sm font-medium transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2 mx-auto sm:mx-0">
+        <span class="bg-brand-mint text-brand-navy font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider">Announcement</span>
+        <span id="promo-banner-text">Enrollments Open for ISO/IEC 42001:2023 Artificial Intelligence & ISO 27001:2022 Lead Auditor Upcoming Batches</span>
+      </div>
+      <div class="hidden sm:flex items-center space-x-4">
+        <a href="#courses" class="text-brand-mint hover:underline font-semibold flex items-center space-x-1">
+          <span>Explore Programs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVIGATION BAR -->
+  <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- BRAND LOGO -->
+        <a href="#home" class="flex items-center space-x-3 group">
+          <div class="w-11 h-11 rounded-xl bg-brand-navy flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+            <span class="font-extrabold text-2xl tracking-tighter text-brand-mint font-heading">V</span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center space-x-1.5">
+              <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-brand-navy font-heading">VERITRON</span>
+              <span class="text-xl sm:text-2xl font-bold tracking-tight text-brand-teal font-heading">GLOBAL</span>
+            </div>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-slate-500">Professional Training & Certification</span>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <div class="hidden lg:flex items-center space-x-7 text-[14px] font-semibold text-slate-700">
+          <a href="#home" class="hover:text-brand-teal transition py-1">Home</a>
+          <a href="#whoweTrain" class="hover:text-brand-teal transition py-1">Who We Train</a>
+          <a href="#courses" class="hover:text-brand-teal transition py-1">Training Programs</a>
+          <a href="#accreditations" class="hover:text-brand-teal transition py-1">Accreditations</a>
+          <a href="#industries" class="hover:text-brand-teal transition py-1">Industries</a>
+          <a href="#process" class="hover:text-brand-teal transition py-1">Process</a>
+          <a href="#faq" class="hover:text-brand-teal transition py-1">FAQ</a>
+        </div>
+
+        <!-- RIGHT CTA -->
+        <div class="hidden md:flex items-center space-x-3">
+          <a href="#courses" class="bg-brand-teal hover:bg-brand-tealHover text-white px-5 py-2.5 rounded-lg font-bold text-sm tracking-wide shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center space-x-2">
+            <span>Explore Courses</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <div class="lg:hidden flex items-center space-x-2">
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-slate-700 hover:text-brand-teal focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MOBILE DROPDOWN -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3 shadow-lg">
+      <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Home</a>
+      <a href="#whoweTrain" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Who We Train</a>
+      <a href="#courses" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Training Programs</a>
+      <a href="#accreditations" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Accreditations</a>
+      <a href="#industries" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Industries</a>
+      <a href="#process" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Process</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Contact Us</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+        <a href="#courses" onclick="toggleMobileMenu()" class="w-full text-center bg-brand-teal text-white py-3 rounded-lg font-bold">Explore Courses</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3. HERO SECTION (Inspired by Uploaded Image with Premium Corporate UI) -->
+  <section id="home" class="relative hero-gradient text-white pt-16 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
+    <!-- Geometric Background Glow Accents -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-teal/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-32 w-[500px] h-[500px] bg-brand-mint/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Pill Badge (similar to "Business Solutions" in reference image) -->
+          <div class="inline-flex items-center space-x-2 bg-brand-navyLight/70 border border-brand-mint/30 px-3.5 py-1.5 rounded-full backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-mint animate-pulse"></span>
+            <span class="text-xs sm:text-sm font-semibold text-brand-mint tracking-wide">International Standards & Corporate Training</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold leading-[1.15] tracking-tight">
+            Empowering Professionals with <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint via-teal-200 to-white">Global Standards</span>
+          </h1>
+
+          <!-- Supporting Text -->
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Advance your career with industry-focused professional training. Develop deep expertise in Quality Management, Information Security, Artificial Intelligence, Environmental Management, and Automotive Standards through expert-led training programs.
+          </p>
+
+          <!-- Trust Indicators 4-Item Grid -->
+          <div class="grid grid-cols-2 gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
+            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
+              <span>Professional Training Programs</span>
+            </div>
+            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
+              <span>Experienced Industry Trainers</span>
+            </div>
+            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
+              <span>Online & In-House Learning</span>
+            </div>
+            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
+              <span>Flexible Training Schedules</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#courses" class="w-full sm:w-auto bg-brand-warmAccent hover:bg-orange-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all flex items-center justify-center space-x-2">
+              <span>Explore Training Programs</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <button onclick="downloadCatalogueModal()" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center justify-center space-x-2 backdrop-blur-sm">
+              <i data-lucide="download" class="w-4 h-4 text-brand-mint"></i>
+              <span>Download Course Catalogue</span>
+            </button>
+          </div>
+
+          <!-- Trust Statement -->
+          <div class="pt-3 border-t border-white/10">
+            <p class="text-xs sm:text-sm text-slate-400 italic">
+              "Supporting Professionals and Organizations in Building Competence and Excellence."
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right Visual Card (Style matches the whiteboard training group photo from user's image) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-teal to-brand-mint rounded-3xl blur-xl opacity-30 transform -rotate-1 scale-105"></div>
+            
+            <!-- Main Image Card Container -->
+            <div class="relative bg-brand-navyDark rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
+              <!-- High-res Corporate Auditor Training Photo -->
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80" 
+                alt="Corporate Training and Auditor Session" 
+                class="w-full h-[360px] sm:h-[420px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+              />
+              
+              <!-- Video Overlay Button (mimicking reference image) -->
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark/90 via-transparent to-black/30 flex items-center justify-center">
+                <button onclick="openVideoTourModal()" class="w-16 h-16 rounded-full bg-white/90 hover:bg-white text-brand-navy flex items-center justify-center shadow-xl hover:scale-110 transition-all">
+                  <i data-lucide="play" class="w-7 h-7 fill-brand-navy translate-x-0.5"></i>
+                </button>
+              </div>
+
+              <!-- Bottom Overlay Caption -->
+              <div class="absolute bottom-4 left-4 right-4 bg-brand-navy/90 backdrop-blur-md rounded-xl p-3 border border-white/10 flex items-center justify-between">
+                <div>
+                  <p class="text-xs font-bold text-brand-mint">Lead Auditor Immersion</p>
+                  <p class="text-xs text-slate-300">ISO/IEC 42001 & 27001 Certified Practice</p>
+                </div>
+                <span class="bg-brand-teal/80 text-[11px] font-semibold px-2.5 py-1 rounded-full text-white">40h Cohort</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Card 1 -->
+            <div class="absolute -top-4 -left-4 bg-white text-brand-navy p-3 rounded-xl shadow-xl border border-slate-100 flex items-center space-x-3 animate-float hidden sm:flex">
+              <div class="w-9 h-9 rounded-lg bg-brand-mintLight text-brand-teal flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold">Global Standard Aligned</p>
+                <p class="text-[10px] text-slate-500">ISO • IEC • IATF Frameworks</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge Card 2 -->
+            <div class="absolute -bottom-5 -right-4 bg-white text-brand-navy p-3.5 rounded-xl shadow-xl border border-slate-100 flex items-center space-x-3 hidden sm:flex">
+              <div class="w-9 h-9 rounded-lg bg-orange-100 text-brand-warmAccent flex items-center justify-center font-bold text-sm">
+                ★ 4.9
+              </div>
+              <div>
+                <p class="text-xs font-bold">1,000+ Certified Learners</p>
+                <p class="text-[10px] text-slate-500">Global Corporate Trust</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. STATISTICS SECTION (Animated Metric Counters) -->
+  <section id="statistics" class="relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:divide-x divide-slate-100 text-center">
+        
+        <div class="px-3">
+          <p id="stat-learners" class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">1,000+</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Learners Trained</p>
+          <span class="text-[10px] text-brand-teal font-medium">Global Alums</span>
+        </div>
+
+        <div class="px-3">
+          <p id="stat-programs" class="text-3xl sm:text-4xl font-extrabold text-brand-teal font-heading">50+</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Training Programs</p>
+          <span class="text-[10px] text-brand-teal font-medium">Standards Covered</span>
+        </div>
+
+        <div class="px-3">
+          <p id="stat-experts" class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">30+</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Industry Experts</p>
+          <span class="text-[10px] text-brand-teal font-medium">Certified Auditors</span>
+        </div>
+
+        <div class="px-3">
+          <p id="stat-industries" class="text-3xl sm:text-4xl font-extrabold text-brand-warmAccent font-heading">40+</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1 uppercase tracking-wider">Industries Served</p>
+          <span class="text-[10px] text-brand-teal font-medium">Enterprise Reach</span>
+        </div>
+
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-100 text-center text-[11px] text-slate-400">
+        <span>* Figures represent verified international training program deployments and enterprise accreditations.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHO WE TRAIN SECTION -->
+  <section id="whoweTrain" class="py-20 bg-brand-slateBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          Tailored Professional Pathways
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Professional Learning for Every Career Stage
+        </h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">
+          Whether you are advancing your individual credentials or upgrading institutional management competence, Veritron Global provides structured competency frameworks.
+        </p>
+      </div>
+
+      <!-- 4 Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- A. Individuals -->
+        <div class="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-navy flex items-center justify-center mb-5 group-hover:bg-brand-navy group-hover:text-brand-mint transition-colors">
+              <i data-lucide="user-check" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy font-heading mb-2">A. Individuals</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              For fresh graduates, job seekers, working professionals, and individuals looking to enhance their professional qualifications and career mobility.
+            </p>
+          </div>
+          <button onclick="filterAudience('Individuals')" class="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-teal hover:text-brand-navy transition">
+            <span>Learn More & View Paths</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- B. Corporate Organizations -->
+        <div class="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-5 group-hover:bg-brand-teal group-hover:text-white transition-colors">
+              <i data-lucide="building-2" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy font-heading mb-2">B. Corporate Organizations</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Customized training programs for corporate employees, leadership teams, quality departments, and information security & AI oversight committees.
+            </p>
+          </div>
+          <button onclick="filterAudience('Corporate')" class="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-teal hover:text-brand-navy transition">
+            <span>Request Corporate Proposal</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- C. Universities & Educational Institutions -->
+        <div class="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center mb-5 group-hover:bg-indigo-700 group-hover:text-white transition-colors">
+              <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy font-heading mb-2">C. Universities & Institutions</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Industry-oriented training for students, faculty members, and academic institutions seeking formal industry audit credentials.
+            </p>
+          </div>
+          <button onclick="filterAudience('Academia')" class="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-teal hover:text-brand-navy transition">
+            <span>Academic Partnership Info</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- D. Consultants & Auditors -->
+        <div class="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col justify-between group hover:-translate-y-1">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-orange-50 text-brand-warmAccent flex items-center justify-center mb-5 group-hover:bg-brand-warmAccent group-hover:text-white transition-colors">
+              <i data-lucide="badge-check" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy font-heading mb-2">D. Consultants & Auditors</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Professional development programs for ISO consultants, internal auditors, lead auditors, and management system practitioners.
+            </p>
+          </div>
+          <button onclick="filterAudience('Auditors')" class="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-teal hover:text-brand-navy transition">
+            <span>Lead Auditor Tracks</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. FEATURED COURSES SECTION (4 Highlighted Course Cards) -->
+  <section id="featured-courses" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-warmAccent bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+            High-Impact Credentials
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+            Most Popular Professional Courses
+          </h2>
+          <p class="text-slate-600 mt-2 text-sm sm:text-base">
+            Internationally benchmarked auditor certifications in highest corporate demand.
+          </p>
+        </div>
+        <a href="#courses" class="mt-4 md:mt-0 text-sm font-bold text-brand-teal hover:text-brand-navy flex items-center space-x-1">
+          <span>View All 8 Disciplines</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- 4 Highlighted Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="ISO 42001 AI Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-brand-navy text-brand-mint text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow">NEW STANDARD</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                <span class="font-bold text-brand-teal">ARTIFICIAL INTELLIGENCE</span>
+                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1 text-slate-400"></i>16 Hours</span>
+              </div>
+              <h3 class="font-heading font-extrabold text-base text-brand-navy leading-snug mb-2 group-hover:text-brand-teal transition">
+                ISO/IEC 42001:2023 Internal Auditor Training
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4">
+                Master the world's first AI Management System standard. Audit governance, safety, transparency, and algorithmic risk.
+              </p>
+              <div class="text-[11px] font-semibold text-slate-500 bg-slate-50 p-2 rounded-lg mb-4 flex items-center justify-between">
+                <span>Mode: Online / In-House</span>
+                <span class="text-brand-teal">Exam Included</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex gap-2">
+            <button onclick="openCourseOutline('ISO/IEC 42001:2023 Internal Auditor', '16 Hours', 'AI Management')" class="w-1/2 py-2 border border-slate-300 hover:border-brand-teal rounded-lg text-xs font-bold text-slate-700 hover:text-brand-teal transition">
+              Outline
+            </button>
+            <button onclick="openEnrollModal('ISO/IEC 42001:2023 Internal Auditor Training', '16 Hours', 'Online / In-House')" class="w-1/2 py-2 bg-brand-teal hover:bg-brand-tealHover rounded-lg text-xs font-bold text-white transition">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="ISO 27001 Information Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-brand-warmAccent text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow">TOP RATED</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                <span class="font-bold text-brand-teal">INFORMATION SECURITY</span>
+                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1 text-slate-400"></i>40 Hours</span>
+              </div>
+              <h3 class="font-heading font-extrabold text-base text-brand-navy leading-snug mb-2 group-hover:text-brand-teal transition">
+                ISO/IEC 27001:2022 Lead Auditor Training
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4">
+                Comprehensive 5-day lead auditor qualification for ISMS under the latest 2022 edition and Annex A controls.
+              </p>
+              <div class="text-[11px] font-semibold text-slate-500 bg-slate-50 p-2 rounded-lg mb-4 flex items-center justify-between">
+                <span>Mode: Online / In-House</span>
+                <span class="text-brand-teal">Global Credential</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex gap-2">
+            <button onclick="openCourseOutline('ISO/IEC 27001:2022 Lead Auditor', '40 Hours', 'Information Security')" class="w-1/2 py-2 border border-slate-300 hover:border-brand-teal rounded-lg text-xs font-bold text-slate-700 hover:text-brand-teal transition">
+              Outline
+            </button>
+            <button onclick="openEnrollModal('ISO/IEC 27001:2022 Lead Auditor Training', '40 Hours', 'Online / In-House')" class="w-1/2 py-2 bg-brand-teal hover:bg-brand-tealHover rounded-lg text-xs font-bold text-white transition">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity & Audit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-brand-navy text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow">FOUNDATIONAL</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                <span class="font-bold text-brand-teal">INFORMATION SECURITY</span>
+                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1 text-slate-400"></i>16 Hours</span>
+              </div>
+              <h3 class="font-heading font-extrabold text-base text-brand-navy leading-snug mb-2 group-hover:text-brand-teal transition">
+                ISO/IEC 27001:2022 Internal Auditor Training
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4">
+                Practical execution of internal audits, risk assessment, control testing, and reporting compliant with ISO 19011.
+              </p>
+              <div class="text-[11px] font-semibold text-slate-500 bg-slate-50 p-2 rounded-lg mb-4 flex items-center justify-between">
+                <span>Mode: Online / In-House</span>
+                <span class="text-brand-teal">Practical Audit Logs</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex gap-2">
+            <button onclick="openCourseOutline('ISO/IEC 27001:2022 Internal Auditor', '16 Hours', 'Information Security')" class="w-1/2 py-2 border border-slate-300 hover:border-brand-teal rounded-lg text-xs font-bold text-slate-700 hover:text-brand-teal transition">
+              Outline
+            </button>
+            <button onclick="openEnrollModal('ISO/IEC 27001:2022 Internal Auditor Training', '16 Hours', 'Online / In-House')" class="w-1/2 py-2 bg-brand-teal hover:bg-brand-tealHover rounded-lg text-xs font-bold text-white transition">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-44 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Lead Auditor AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-brand-mint text-brand-navy text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow">EXECUTIVE</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+                <span class="font-bold text-brand-teal">ARTIFICIAL INTELLIGENCE</span>
+                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1 text-slate-400"></i>40 Hours</span>
+              </div>
+              <h3 class="font-heading font-extrabold text-base text-brand-navy leading-snug mb-2 group-hover:text-brand-teal transition">
+                ISO/IEC 42001:2023 Lead Auditor Training
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4">
+                Premier 40-hour lead auditor certification for managing third-party AI assurance audits and continuous oversight.
+              </p>
+              <div class="text-[11px] font-semibold text-slate-500 bg-slate-50 p-2 rounded-lg mb-4 flex items-center justify-between">
+                <span>Mode: Online / In-House</span>
+                <span class="text-brand-teal">Executive Credential</span>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex gap-2">
+            <button onclick="openCourseOutline('ISO/IEC 42001:2023 Lead Auditor', '40 Hours', 'AI Management')" class="w-1/2 py-2 border border-slate-300 hover:border-brand-teal rounded-lg text-xs font-bold text-slate-700 hover:text-brand-teal transition">
+              Outline
+            </button>
+            <button onclick="openEnrollModal('ISO/IEC 42001:2023 Lead Auditor Training', '40 Hours', 'Online / In-House')" class="w-1/2 py-2 bg-brand-teal hover:bg-brand-tealHover rounded-lg text-xs font-bold text-white transition">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Editable Promotional Banner (Ethical, No False Urgency Claims) -->
+      <div class="mt-12 bg-gradient-to-r from-brand-navy to-brand-navyLight rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-white/10">
+        <div class="space-y-1 text-center md:text-left">
+          <div class="inline-flex items-center space-x-2 text-brand-mint text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Corporate & Group Training Benefits</span>
+          </div>
+          <h4 id="promo-offer-title" class="text-xl sm:text-2xl font-bold font-heading">
+            Exclusive Cohort Packages for Enterprise Teams
+          </h4>
+          <p id="promo-offer-sub" class="text-slate-300 text-xs sm:text-sm max-w-xl">
+            Customised in-house delivery, flexible scheduling across multiple time-zones, and dedicated post-training audit support for corporate teams of 5 or more.
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <a href="#contact" class="bg-brand-mint hover:bg-teal-300 text-brand-navy font-extrabold px-6 py-3 rounded-xl text-sm transition shadow-md">
+            Request Corporate Quotation
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. COMPLETE TRAINING PROGRAMS CATALOGUE (Searchable & Filterable) -->
+  <section id="courses" class="py-20 bg-brand-slateBg border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          Comprehensive Standards Matrix
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Explore Our Professional Training Programs
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          "Your Journey Towards Professional Excellence Starts Here."
+        </p>
+      </div>
+
+      <!-- Filter Bar & Search Controls -->
+      <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 mb-8 flex flex-col md:flex-row gap-4 justify-between items-center">
+        <!-- Search Input -->
+        <div class="relative w-full md:w-80">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input 
+            type="text" 
+            id="course-search" 
+            oninput="renderCourses()" 
+            placeholder="Search ISO standard, title, keyword..." 
+            class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal"
+          />
+        </div>
+
+        <!-- Discipline Category Filters -->
+        <div class="flex items-center space-x-1.5 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none" id="category-pills">
+          <button onclick="setCourseCategory('All')" class="cat-pill active-cat px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-navy text-white transition whitespace-nowrap">All Standards</button>
+          <button onclick="setCourseCategory('Quality')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Quality</button>
+          <button onclick="setCourseCategory('Security')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">InfoSec</button>
+          <button onclick="setCourseCategory('AI')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Artificial Intelligence</button>
+          <button onclick="setCourseCategory('Environment')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Environment & Safety</button>
+          <button onclick="setCourseCategory('Automotive')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Automotive</button>
+          <button onclick="setCourseCategory('Food')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Food Safety</button>
+        </div>
+      </div>
+
+      <!-- Course Level Tabs (Awareness, Foundation, Internal Auditor, Lead Auditor, Implementation) -->
+      <div class="flex items-center space-x-2 mb-8 overflow-x-auto pb-1 text-xs font-medium text-slate-500">
+        <span class="font-bold text-brand-navy mr-2">Course Level:</span>
+        <button onclick="setLevelFilter('All')" class="level-btn active-level bg-brand-teal text-white px-3 py-1 rounded-full">All Levels</button>
+        <button onclick="setLevelFilter('Awareness')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Awareness (4h)</button>
+        <button onclick="setLevelFilter('Foundation')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Foundation (8h)</button>
+        <button onclick="setLevelFilter('Internal Auditor')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Internal Auditor (16h)</button>
+        <button onclick="setLevelFilter('Lead Auditor')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Lead Auditor (40h)</button>
+        <button onclick="setLevelFilter('Implementation')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Implementation (24h)</button>
+      </div>
+
+      <!-- Live Dynamic Course Cards Grid (Populated via JS & Editable via Admin) -->
+      <div id="course-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <div class="mt-8 text-center text-xs text-slate-500 flex items-center justify-center space-x-2">
+        <i data-lucide="info" class="w-4 h-4 text-brand-teal"></i>
+        <span>All course details, publication statuses, durations, and syllabi are verified and updatable via the admin console.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. ACCREDITATION & RECOGNITION SECTION -->
+  <section id="accreditations" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          International Recognition & Governance
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Training Excellence Backed by Global Standards
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Veritron Global delivers learning mapped strictly against international normative frameworks, professional trainer competencies, and verifiable evaluation metrics.
+        </p>
+      </div>
+
+      <!-- 6 Quality Pillars -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        
+        <div class="p-6 rounded-2xl bg-brand-slateBg border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center mb-3">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-brand-navy text-base mb-1">International Training Recognition</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Curricula structured in harmony with global ISO 19011 auditing guidelines, ensuring universal recognition across multinational corporate operations.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-slateBg border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center mb-3">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-brand-navy text-base mb-1">Professional Trainer Competence</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Every instructor is an active, accredited lead auditor with minimum 10+ years of sector implementation and third-party audit leadership.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-slateBg border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center mb-3">
+            <i data-lucide="layout-grid" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-brand-navy text-base mb-1">Structured Methodologies</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Blend of accelerated adult learning principles, live mock audits, scenario-based non-conformity reporting, and interactive debriefs.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-slateBg border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center mb-3">
+            <i data-lucide="target" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-brand-navy text-base mb-1">Competency-Based Learning</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Continuous progressive evaluation ensures students demonstrate practical audit skills rather than rote textbook memorization.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-slateBg border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center mb-3">
+            <i data-lucide="file-check" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-brand-navy text-base mb-1">Formal Examination & Assessment</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Rigorous invigilated assessments verifying clause comprehension, evidence evaluation, and closing meeting audit presentation.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-slateBg border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center mb-3">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-brand-navy text-base mb-1">Verifiable Course Certificates</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Secure serialized digital certificates featuring unique QR verification codes for employer and audit body instant authentication.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Why Accreditation Matters Box & Action Buttons -->
+      <div class="bg-gradient-to-br from-brand-navyDark to-brand-navy text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <span class="text-brand-mint text-xs font-bold uppercase tracking-wider">Quality Assurance Policy</span>
+            <h3 class="text-2xl sm:text-3xl font-bold font-heading">Why Accreditation Matters</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Recognized training frameworks guarantee that the competencies gained satisfy international certification registries and employer compliance standards. Veritron Global strictly follows authorized criteria and adheres to rigorous transparency: we do not claim unverified recognition.
+            </p>
+            <p class="text-slate-400 text-xs italic">
+              Note: Exemplar Global and TPECS framework alignment disclosures are provided strictly in accordance with authorized institutional affiliations.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+            <button onclick="openAccreditationModal()" class="w-full bg-brand-teal hover:bg-brand-tealHover text-white font-bold py-3 px-6 rounded-xl text-xs sm:text-sm transition text-center shadow-md">
+              View Authorized Accreditations
+            </button>
+            <button onclick="openVerifyCredentialModal()" class="w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold py-3 px-6 rounded-xl text-xs sm:text-sm transition text-center">
+              Verify Certificate Credentials
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. WHY CHOOSE VERITRON GLOBAL? (6 Modern Feature Cards) -->
+  <section class="py-20 bg-brand-slateBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          The Veritron Advantage
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Your Trusted Partner in Professional Development
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Proven instructional methodologies tailored for modern enterprise governance and personal career growth.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 1. Expert Trainers -->
+        <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-card-hover transition-all duration-300 border border-slate-200 group">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-teal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="user-star" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-brand-navy mb-2 font-heading">1. Expert Trainers</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Learn directly from seasoned lead auditors and management consultants with practical industry knowledge across Fortune 500 implementations.
+          </p>
+        </div>
+
+        <!-- 2. Flexible Batches -->
+        <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-card-hover transition-all duration-300 border border-slate-200 group">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="calendar-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-brand-navy mb-2 font-heading">2. Flexible Batches</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Choose weekend, evening, or intensive weekday bootcamps designed to fit around demanding corporate responsibilities and professional commitments.
+          </p>
+        </div>
+
+        <!-- 3. Online Learning -->
+        <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-card-hover transition-all duration-300 border border-slate-200 group">
+          <div class="w-12 h-12 rounded-xl bg-mint-50 text-brand-teal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="monitor-play" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-brand-navy mb-2 font-heading">3. Online Learning</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Participate in interactive, live virtual classrooms with breakout audit simulations, digital whiteboards, and real-time facilitator guidance.
+          </p>
+        </div>
+
+        <!-- 4. Corporate Training -->
+        <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-card-hover transition-all duration-300 border border-slate-200 group">
+          <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-brand-navy mb-2 font-heading">4. Corporate Training</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Bespoke training programs contextualized to your company's proprietary management systems, risk profile, and compliance priorities.
+          </p>
+        </div>
+
+        <!-- 5. Industry-Relevant Curriculum -->
+        <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-card-hover transition-all duration-300 border border-slate-200 group">
+          <div class="w-12 h-12 rounded-xl bg-orange-50 text-brand-warmAccent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="book-open-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-brand-navy mb-2 font-heading">5. Industry-Relevant Curriculum</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Gain pragmatic mastery through real-world case studies, audit checklist templates, mock non-conformity findings, and mock audits.
+          </p>
+        </div>
+
+        <!-- 6. Professional Development -->
+        <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-card-hover transition-all duration-300 border border-slate-200 group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="trending-up" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-brand-navy mb-2 font-heading">6. Professional Development</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Build verified competence, obtain globally respected credentials, and accelerate your career trajectory toward Chief Quality or CISO leadership.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 10. TRAINING MODES (3 Dedicated Cards with Photos) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          Flexible Delivery Formats
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Versatile Training Modes Designed for Global Professionals
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Choose the learning modality that aligns with your operational cadence and team distribution.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Mode 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card hover:shadow-card-hover transition group flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=700&q=80" alt="Live Online Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-brand-navy/30"></div>
+              <span class="absolute bottom-3 left-3 bg-brand-teal text-white text-xs font-bold px-3 py-1 rounded-full">Interactive Virtual</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-brand-navy mb-2 font-heading">Live Online Training</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Instructor-led virtual sessions connecting professionals worldwide. Includes live Q&A, mock audit workshops, digital course materials, and virtual breakout discussions.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-4">
+                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal mr-2"></i>Global time-zone compatibility</li>
+                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal mr-2"></i>Recorded revision archives</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="#courses" class="block text-center py-2.5 rounded-xl border border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white font-bold text-xs transition">
+              Explore Virtual Courses
+            </a>
+          </div>
+        </div>
+
+        <!-- Mode 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card hover:shadow-card-hover transition group flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=700&q=80" alt="In-House Corporate Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-brand-navy/30"></div>
+              <span class="absolute bottom-3 left-3 bg-brand-navy text-brand-mint text-xs font-bold px-3 py-1 rounded-full">On-Premises</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-brand-navy mb-2 font-heading">In-House Corporate Training</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Delivered at your company facilities by senior auditors. We tailor the exercises to your specific industry sector, operational processes, and internal documentation.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-4">
+                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal mr-2"></i>Internal process integration</li>
+                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal mr-2"></i>Cost-efficient for cohort groups</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="#contact" class="block text-center py-2.5 rounded-xl border border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-bold text-xs transition">
+              Inquire Corporate Booking
+            </a>
+          </div>
+        </div>
+
+        <!-- Mode 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card hover:shadow-card-hover transition group flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=700&q=80" alt="Customized Professional Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-brand-navy/30"></div>
+              <span class="absolute bottom-3 left-3 bg-brand-warmAccent text-white text-xs font-bold px-3 py-1 rounded-full">Tailored Executive</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-brand-navy mb-2 font-heading">Customized Training</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Hybrid bespoke programs blending executive briefings with hands-on auditor upskilling for specialized regulatory mandates (e.g., Medical Devices & AI Safety).
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-4">
+                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal mr-2"></i>Bespoke syllabi & timeline</li>
+                <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal mr-2"></i>Executive committee guidance</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="#contact" class="block text-center py-2.5 rounded-xl border border-brand-warmAccent text-brand-warmAccent hover:bg-brand-warmAccent hover:text-white font-bold text-xs transition">
+              Consult with a Specialist
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 11. INDUSTRIES WE SERVE (12-Industry Grid with Modern Icons) -->
+  <section id="industries" class="py-20 bg-brand-slateBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          Cross-Sector Mastery
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Industries We Serve
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Our international training programs support compliance and quality mandates across diverse enterprise ecosystems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-blue-50 text-brand-teal flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="laptop" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Information Technology</p>
+          <span class="text-[10px] text-slate-400">ISO 27001 • ISO 20000</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-slate-100 text-brand-navy flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="factory" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Manufacturing</p>
+          <span class="text-[10px] text-slate-400">ISO 9001 • Lean Six Sigma</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-red-50 text-red-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="car" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Automotive</p>
+          <span class="text-[10px] text-slate-400">IATF 16949 • VDA 6.3</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Healthcare</p>
+          <span class="text-[10px] text-slate-400">ISO 15189 • JCI</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="pill" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Pharmaceuticals</p>
+          <span class="text-[10px] text-slate-400">ISO 13485 • GMP</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="utensils" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Food Processing</p>
+          <span class="text-[10px] text-slate-400">ISO 22000 • HACCP • FSSC</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-yellow-50 text-yellow-700 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="hard-hat" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Construction</p>
+          <span class="text-[10px] text-slate-400">ISO 45001 • ISO 14001</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Education</p>
+          <span class="text-[10px] text-slate-400">ISO 21001 (EOMS)</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-green-50 text-green-700 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="landmark" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Banking & Finance</p>
+          <span class="text-[10px] text-slate-400">ISO 22301 • ISO 27001</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="radio" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Telecommunications</p>
+          <span class="text-[10px] text-slate-400">TL 9000 • ISO 27001</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="truck" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">Logistics & Supply Chain</p>
+          <span class="text-[10px] text-slate-400">ISO 28000 • ISO 9001</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brand-teal hover:shadow-md transition text-center group">
+          <div class="w-11 h-11 mx-auto rounded-lg bg-teal-50 text-brand-teal flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <p class="font-bold text-xs sm:text-sm text-brand-navy">AI & Advanced Tech</p>
+          <span class="text-[10px] text-slate-400">ISO/IEC 42001 • NIST AI</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 12. OUR TRAINING PROCESS (6-Step Interactive Timeline) -->
+  <section id="process" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          Structured Learning Pathway
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Our Six-Stage Training Process
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          From course exploration to eligible global certification issuance, experience a seamless learner journey.
+        </p>
+      </div>
+
+      <!-- 6-Step Visual Timeline -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-brand-slateBg rounded-2xl p-5 border border-slate-200 flex flex-col justify-between text-center relative group hover:border-brand-teal transition">
+          <div>
+            <span class="text-2xl font-black text-brand-teal font-heading block mb-2">01</span>
+            <div class="w-12 h-12 mx-auto rounded-full bg-white shadow flex items-center justify-center text-brand-navy mb-3 group-hover:bg-brand-teal group-hover:text-white transition">
+              <i data-lucide="compass" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy mb-1">Choose Course</h4>
+            <p class="text-xs text-slate-500">Select standard, discipline, and level (Awareness to Lead Auditor).</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-brand-slateBg rounded-2xl p-5 border border-slate-200 flex flex-col justify-between text-center relative group hover:border-brand-teal transition">
+          <div>
+            <span class="text-2xl font-black text-brand-teal font-heading block mb-2">02</span>
+            <div class="w-12 h-12 mx-auto rounded-full bg-white shadow flex items-center justify-center text-brand-navy mb-3 group-hover:bg-brand-teal group-hover:text-white transition">
+              <i data-lucide="send" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy mb-1">Submit Enquiry</h4>
+            <p class="text-xs text-slate-500">Provide preferences for mode (online/in-house) and batch timing.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-brand-slateBg rounded-2xl p-5 border border-slate-200 flex flex-col justify-between text-center relative group hover:border-brand-teal transition">
+          <div>
+            <span class="text-2xl font-black text-brand-teal font-heading block mb-2">03</span>
+            <div class="w-12 h-12 mx-auto rounded-full bg-white shadow flex items-center justify-center text-brand-navy mb-3 group-hover:bg-brand-teal group-hover:text-white transition">
+              <i data-lucide="calendar-range" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy mb-1">Confirm Batch</h4>
+            <p class="text-xs text-slate-500">Receive schedule confirmation, syllabus outline, and reading materials.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-brand-slateBg rounded-2xl p-5 border border-slate-200 flex flex-col justify-between text-center relative group hover:border-brand-teal transition">
+          <div>
+            <span class="text-2xl font-black text-brand-teal font-heading block mb-2">04</span>
+            <div class="w-12 h-12 mx-auto rounded-full bg-white shadow flex items-center justify-center text-brand-navy mb-3 group-hover:bg-brand-teal group-hover:text-white transition">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy mb-1">Attend Training</h4>
+            <p class="text-xs text-slate-500">Live instruction by senior lead auditors with practical mock audits.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-brand-slateBg rounded-2xl p-5 border border-slate-200 flex flex-col justify-between text-center relative group hover:border-brand-teal transition">
+          <div>
+            <span class="text-2xl font-black text-brand-teal font-heading block mb-2">05</span>
+            <div class="w-12 h-12 mx-auto rounded-full bg-white shadow flex items-center justify-center text-brand-navy mb-3 group-hover:bg-brand-teal group-hover:text-white transition">
+              <i data-lucide="file-check-2" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy mb-1">Assessment</h4>
+            <p class="text-xs text-slate-500">Complete practical continuous evaluations and final invigilated exam.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="bg-brand-slateBg rounded-2xl p-5 border border-slate-200 flex flex-col justify-between text-center relative group hover:border-brand-teal transition">
+          <div>
+            <span class="text-2xl font-black text-brand-warmAccent font-heading block mb-2">06</span>
+            <div class="w-12 h-12 mx-auto rounded-full bg-orange-100 text-brand-warmAccent shadow flex items-center justify-center mb-3">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy mb-1">Get Certified</h4>
+            <p class="text-xs text-slate-500">Receive verifiable digital certificate and credential verification badge.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- 14. TESTIMONIALS SECTION (Learner Carousel) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          Verified Feedback
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          What Our Learners Say
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Read genuine feedback from certified auditors and corporate compliance executives.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-brand-slateBg rounded-2xl p-7 border border-slate-200 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-6">
+              "The ISO/IEC 42001 AI Lead Auditor program was transformative. The instructors provided clear, actionable audit checklists that helped our company establish complete compliance for our machine learning deployments."
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+            <div class="w-10 h-10 rounded-full bg-brand-navy text-white flex items-center justify-center font-bold text-xs">
+              MR
+            </div>
+            <div>
+              <p class="text-xs font-bold text-brand-navy">Marcus Reed</p>
+              <p class="text-[11px] text-slate-500">Chief Information Security Officer • Global Fintech</p>
+              <span class="text-[10px] text-brand-teal font-semibold">ISO/IEC 42001 Lead Auditor Graduate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-brand-slateBg rounded-2xl p-7 border border-slate-200 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-6">
+              "Our automotive manufacturing quality team completed the IATF 16949 internal auditor training with Veritron Global. The real-world non-conformity exercises directly elevated our internal audit thoroughness."
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+            <div class="w-10 h-10 rounded-full bg-brand-teal text-white flex items-center justify-center font-bold text-xs">
+              ES
+            </div>
+            <div>
+              <p class="text-xs font-bold text-brand-navy">Elena Santos</p>
+              <p class="text-[11px] text-slate-500">Quality Assurance Director • Tier-1 Auto Systems</p>
+              <span class="text-[10px] text-brand-teal font-semibold">IATF 16949 Internal Auditor Graduate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-brand-slateBg rounded-2xl p-7 border border-slate-200 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-6">
+              "Veritron Global delivers true international standard depth. The ISO 27001:2022 course was rigorously managed, and the online exam integrity was exemplary. Highly recommended for serious professionals."
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 border-t border-slate-200">
+            <div class="w-10 h-10 rounded-full bg-brand-warmAccent text-white flex items-center justify-center font-bold text-xs">
+              DK
+            </div>
+            <div>
+              <p class="text-xs font-bold text-brand-navy">David Kim</p>
+              <p class="text-[11px] text-slate-500">Senior ISO Management Consultant</p>
+              <span class="text-[10px] text-brand-teal font-semibold">ISO 27001:2022 Lead Auditor Graduate</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 15. FAQ SECTION (Expandable Accordion with All 8 Required Questions) -->
+  <section id="faq" class="py-20 bg-brand-slateBg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+          Knowledge Base
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Detailed answers regarding auditor training, certificates, online modes, and corporate delivery.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+
+        <!-- FAQ 1 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>What is ISO auditor training?</span>
+            <i id="faq-icon-1" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-1" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            ISO auditor training is a structured professional educational program that teaches participants how to evaluate, audit, and improve organizational management systems in compliance with specific International Organization for Standardization (ISO) requirements. It covers ISO 19011 auditing principles, audit planning, gathering objective evidence, non-conformity identification, and reporting.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>What is the difference between an Internal Auditor and Lead Auditor course?</span>
+            <i id="faq-icon-2" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-2" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            An <strong>Internal Auditor course</strong> (typically 16 hours) prepares professionals to conduct first-party (internal) audits within their own organization. A <strong>Lead Auditor course</strong> (typically 40 hours) is an advanced, comprehensive qualification that prepares senior auditors to lead second-party (supplier) and third-party (external certification body) audit teams, manage full audit lifecycles, and render certification decisions.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>Are courses available online?</span>
+            <i id="faq-icon-3" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-3" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Yes. We offer fully accredited Live Online Virtual Classrooms led in real-time by certified trainers. These sessions feature interactive group case studies, breakout room audit roleplays, and digital exam invigilation compatible across global time zones.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(4)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>Do you provide corporate training?</span>
+            <i id="faq-icon-4" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-4" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Yes. We specialize in bespoke in-house and private virtual training for corporations, government agencies, and institutions. Syllabi can be customized to your specific industry sector, operational processes, and existing management system documentation.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(5)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>How can I download a course outline?</span>
+            <i id="faq-icon-5" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-5" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            You can click the "Course Outline" button on any card in the Training Programs catalogue or Featured Courses section. You can view module-by-module topics online or download a printer-ready PDF version immediately.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(6)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>What are the course examination requirements?</span>
+            <i id="faq-icon-6" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-6" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Assessment involves continuous evaluation (active participation, workshops, practical audit role-play demonstrations) followed by an invigilated written examination at the conclusion of the course. The passing threshold is typically 70%. Free re-sit options are provided where applicable.
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(7)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>What certificate will I receive?</span>
+            <i id="faq-icon-7" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-7" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Successful candidates receive an official Certificate of Competence issued by Veritron Global with an individual serial registration number and tamper-proof verification QR code. Participants who attend without passing the examination receive a formal Certificate of Attendance.
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(8)" class="w-full py-4 px-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-brand-navy hover:text-brand-teal transition">
+            <span>How do I register for a training program?</span>
+            <i id="faq-icon-8" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faq-ans-8" class="hidden px-6 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            You can register by clicking "Enroll Now" on any course card or filling out the enquiry form below. Our training advisors will follow up within 24 hours to confirm your batch allocation, issue joining credentials, and answer any logistical questions.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 16. CONTACT & ENROLLMENT SECTION (Fully Interactive Form with Live Validation & Confirmation) -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Column: Heading & Contact Info -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+              Get In Touch
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-3 font-heading leading-tight">
+              Take the Next Step in Your Professional Journey
+            </h2>
+            <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+              Connect with our training advisory team to discuss course suitability, corporate cohort proposals, and upcoming international batch schedules.
+            </p>
+          </div>
+
+          <!-- Contact Details Cards -->
+          <div class="space-y-4">
+            
+            <div class="flex items-start space-x-4 p-4 rounded-xl bg-brand-slateBg border border-slate-200">
+              <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-500 uppercase">Official Email</p>
+                <a href="mailto:admissions@veritronglobal.com" class="text-sm font-bold text-brand-navy hover:text-brand-teal">admissions@veritronglobal.com</a>
+                <p class="text-[11px] text-slate-400">Response within 1 business day</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 rounded-xl bg-brand-slateBg border border-slate-200">
+              <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-500 uppercase">Admissions Desk</p>
+                <p class="text-sm font-bold text-brand-navy">+1 (800) 412-8930 / +44 20 7946 0920</p>
+                <p class="text-[11px] text-slate-400">Monday - Friday (8:00 AM - 6:00 PM GMT)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 rounded-xl bg-brand-slateBg border border-slate-200">
+              <div class="w-10 h-10 rounded-lg bg-brand-navy text-brand-mint flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-500 uppercase">International Headquarters</p>
+                <p class="text-sm font-bold text-brand-navy">Veritron Global Executive Centre</p>
+                <p class="text-[11px] text-slate-500">One Canada Square, Canary Wharf, London, E14 5AA, United Kingdom</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Stylized Map / Location Placeholder -->
+          <div class="rounded-xl overflow-hidden border border-slate-200 h-44 bg-slate-100 relative flex items-center justify-center text-center p-4">
+            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#102B46_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="relative z-10">
+              <div class="w-8 h-8 rounded-full bg-brand-teal text-white flex items-center justify-center mx-auto mb-2 animate-bounce">
+                <i data-lucide="navigation" class="w-4 h-4"></i>
+              </div>
+              <p class="text-xs font-bold text-brand-navy">Global Executive Training Hub</p>
+              <p class="text-[10px] text-slate-500">London • Dubai • Singapore • Hybrid Virtual</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Professional Enquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+            <h3 class="text-xl sm:text-2xl font-extrabold text-brand-navy font-heading mb-2">Submit Your Course Enquiry</h3>
+            <p class="text-xs text-slate-500 mb-6">Complete the form below to receive syllabus breakdowns, fee structures, and batch reservations.</p>
+
+            <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name *</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Dr. Alexander Vance" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address *</label>
+                  <input type="email" id="form-email" required placeholder="alexander@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Contact Number (with Country Code) *</label>
+                  <input type="tel" id="form-phone" required placeholder="+1 555 019 2831" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Organization / Employer</label>
+                  <input type="text" id="form-org" placeholder="e.g. Global Tech Solutions Ltd." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Country *</label>
+                  <input type="text" id="form-country" required placeholder="e.g. United Kingdom" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Interested Course *</label>
+                  <select id="form-course" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                    <option value="">-- Select Standard / Course --</option>
+                    <option value="ISO/IEC 42001:2023 Artificial Intelligence Lead Auditor">ISO/IEC 42001:2023 AI Lead Auditor</option>
+                    <option value="ISO/IEC 42001:2023 Artificial Intelligence Internal Auditor">ISO/IEC 42001:2023 AI Internal Auditor</option>
+                    <option value="ISO/IEC 27001:2022 Information Security Lead Auditor">ISO/IEC 27001:2022 ISMS Lead Auditor</option>
+                    <option value="ISO/IEC 27001:2022 Information Security Internal Auditor">ISO/IEC 27001:2022 ISMS Internal Auditor</option>
+                    <option value="ISO 9001:2015 Quality Management Systems">ISO 9001:2015 QMS Auditor Training</option>
+                    <option value="ISO 14001:2015 Environmental Management">ISO 14001:2015 EMS Auditor Training</option>
+                    <option value="ISO 45001:2018 Occupational Health & Safety">ISO 45001:2018 OHSMS Training</option>
+                    <option value="IATF 16949:2016 Automotive Quality">IATF 16949:2016 Automotive Training</option>
+                    <option value="ISO 13485:2016 Medical Devices Quality">ISO 13485:2016 Medical Devices Training</option>
+                    <option value="ISO 22000:2018 Food Safety Management">ISO 22000:2018 Food Safety Training</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Training Mode *</label>
+                  <select id="form-mode" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                    <option value="Live Virtual Online">Live Virtual Online</option>
+                    <option value="In-House Corporate">In-House Corporate</option>
+                    <option value="Hybrid Custom">Hybrid Custom</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Batch Timing</label>
+                  <select id="form-batch" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                    <option value="Immediate Upcoming Batch">Immediate Upcoming Batch</option>
+                    <option value="Next Month">Next Month</option>
+                    <option value="Weekend Schedule Only">Weekend Schedule Only</option>
+                    <option value="Flexible Corporate Schedule">Flexible Corporate Schedule</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message or Specific Objectives</label>
+                <textarea id="form-msg" rows="3" placeholder="Tell us about your team size, prior auditing experience, or specific certification goals..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="w-full bg-brand-teal hover:bg-brand-tealHover text-white font-extrabold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                  <span>Submit Course Enquiry</span>
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+              </div>
+
+              <p class="text-[11px] text-slate-400 text-center">
+                🔒 Your personal information is protected. We will never share or sell your details.
+              </p>
+
+            </form>
+
+            <!-- Success State -->
+            <div id="enquiry-success" class="hidden text-center py-10 space-y-3">
+              <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+              </div>
+              <h4 class="text-xl font-bold text-brand-navy">Thank You for Your Enquiry!</h4>
+              <p class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto">
+                Your request has been logged into our admissions registry. A senior training advisor has been assigned to contact you via email & phone with the complete syllabus and schedule.
+              </p>
+              <button onclick="resetEnquiryForm()" class="mt-4 px-5 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-xs font-bold text-slate-700">
+                Submit Another Enquiry
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 17. FOOTER SECTION -->
+  <footer class="bg-brand-navyDark text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white border border-brand-mint/30 shadow">
+              <span class="font-extrabold text-2xl text-brand-mint font-heading">V</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <span class="text-xl font-extrabold tracking-tight text-white font-heading">VERITRON</span>
+              <span class="text-xl font-bold tracking-tight text-brand-mint font-heading">GLOBAL</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            "Empowering Professionals with Global Standards."
+          </p>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Veritron Global is an international corporate training and professional certification organization committed to competence, organizational excellence, and verifiable audit mastery.
+          </p>
+          <div class="flex items-center space-x-3 pt-2">
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-teal flex items-center justify-center text-slate-300 hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-teal flex items-center justify-center text-slate-300 hover:text-white transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-teal flex items-center justify-center text-slate-300 hover:text-white transition"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-teal flex items-center justify-center text-slate-300 hover:text-white transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#home" class="hover:text-brand-mint transition">About Us</a></li>
+            <li><a href="#courses" class="hover:text-brand-mint transition">Training Programs</a></li>
+            <li><a href="#accreditations" class="hover:text-brand-mint transition">Accreditations</a></li>
+            <li><a href="#industries" class="hover:text-brand-mint transition">Industries We Serve</a></li>
+            <li><a href="#faq" class="hover:text-brand-mint transition">Knowledge Base & FAQ</a></li>
+            <li><a href="#contact" class="hover:text-brand-mint transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Courses -->
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Popular Courses</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#courses" onclick="filterByStandard('ISO 9001')" class="hover:text-brand-mint transition">ISO 9001 (Quality)</a></li>
+            <li><a href="#courses" onclick="filterByStandard('ISO 14001')" class="hover:text-brand-mint transition">ISO 14001 (Environment)</a></li>
+            <li><a href="#courses" onclick="filterByStandard('ISO 45001')" class="hover:text-brand-mint transition">ISO 45001 (OH&S)</a></li>
+            <li><a href="#courses" onclick="filterByStandard('ISO 27001')" class="hover:text-brand-mint transition">ISO/IEC 27001:2022 (InfoSec)</a></li>
+            <li><a href="#courses" onclick="filterByStandard('ISO 22000')" class="hover:text-brand-mint transition">ISO 22000 (Food Safety)</a></li>
+            <li><a href="#courses" onclick="filterByStandard('ISO 13485')" class="hover:text-brand-mint transition">ISO 13485 (Medical Devices)</a></li>
+            <li><a href="#courses" onclick="filterByStandard('IATF 16949')" class="hover:text-brand-mint transition">IATF 16949 (Automotive)</a></li>
+            <li><a href="#courses" onclick="filterByStandard('ISO 42001')" class="hover:text-brand-mint transition">ISO/IEC 42001:2023 (AI)</a></li>
+          </ul>
+        </div>
+
+        <!-- Regulatory & Trust -->
+        <div>
+          <h4 class="font-heading font-bold text-sm text-white mb-4 uppercase tracking-wider">Compliance & Policies</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#" onclick="openLegalModal('Privacy Policy')" class="hover:text-brand-mint transition">Privacy Policy</a></li>
+            <li><a href="#" onclick="openLegalModal('Terms & Conditions')" class="hover:text-brand-mint transition">Terms & Conditions</a></li>
+            <li><a href="#" onclick="openLegalModal('Refund Policy')" class="hover:text-brand-mint transition">Refund & Rescheduling Policy</a></li>
+            <li><a href="#" onclick="openLegalModal('Disclaimer')" class="hover:text-brand-mint transition">Accreditation Disclaimer</a></li>
+            <li><a href="#" onclick="openVerifyCredentialModal()" class="hover:text-brand-mint transition">Certificate Verification Portal</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Disclaimer Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 VERITRON GLOBAL. All rights reserved. International Standards are registered trademarks of their respective organizations.</p>
+        <p class="text-[11px] text-slate-400">ISO • IEC • IATF • Exemplar Global Aligned Programs</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (with quick chat prompt) -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center space-x-2">
+    <div id="whatsapp-tooltip" class="hidden sm:block bg-white text-slate-800 text-xs font-semibold py-1.5 px-3 rounded-xl shadow-lg border border-slate-200 animate-pulse">
+      💬 Chat with Admissions Team
+    </div>
+    <a 
+      href="https://wa.me/18004128930?text=Hello%20Veritron%20Global,%20I%20am%20interested%20in%20ISO%20Auditor%20Training%20programs." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+      title="Contact on WhatsApp"
+    >
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODALS & POPUPS                                         -->
+  <!-- ======================================================== -->
+
+  <!-- COURSE OUTLINE MODAL -->
+  <div id="modal-outline" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span id="modal-outline-cat" class="text-xs font-bold text-brand-teal uppercase">Category</span>
+          <h3 id="modal-outline-title" class="text-xl sm:text-2xl font-bold text-brand-navy font-heading mt-1">Course Outline</h3>
+          <p id="modal-outline-dur" class="text-xs text-slate-500 mt-1">Duration: 16 Hours • Online / In-House</p>
+        </div>
+        <button onclick="closeModal('modal-outline')" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 my-6 text-xs sm:text-sm text-slate-600">
+        <h4 class="font-bold text-brand-navy uppercase text-xs">Curriculum Modules & Competencies Covered:</h4>
+        <div class="bg-slate-50 p-4 rounded-xl space-y-2 border border-slate-200">
+          <div class="flex items-start space-x-2">
+            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] flex-shrink-0">1</span>
+            <p><strong>Normative Framework & Clauses:</strong> In-depth study of standard clauses, risk-based thinking, and high-level structure (Annex SL).</p>
+          </div>
+          <div class="flex items-start space-x-2">
+            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] flex-shrink-0">2</span>
+            <p><strong>Audit Principles (ISO 19011):</strong> Auditor ethics, audit scope definition, objective evidence verification, and sampling techniques.</p>
+          </div>
+          <div class="flex items-start space-x-2">
+            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] flex-shrink-0">3</span>
+            <p><strong>Audit Execution & Roleplay:</strong> Opening meetings, interviewing auditees, identifying major vs. minor non-conformities, and root cause analysis.</p>
+          </div>
+          <div class="flex items-start space-x-2">
+            <span class="w-5 h-5 rounded-full bg-brand-teal text-white flex items-center justify-center text-[10px] flex-shrink-0">4</span>
+            <p><strong>Audit Reporting & Follow-Up:</strong> Formulating audit reports, corrective action reviews, and surveillance audit readiness.</p>
+          </div>
+        </div>
+        <div class="p-4 bg-teal-50 border border-teal-200 rounded-xl flex items-center justify-between">
+          <span class="text-xs text-brand-teal font-semibold">Standard syllabus updated to current active international edition.</span>
+          <span class="text-xs font-bold text-brand-navy">PDF Ready</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-slate-100">
+        <button onclick="downloadPdfNotice()" class="flex-1 py-3 bg-brand-navy text-white rounded-xl text-xs font-bold hover:bg-brand-navyDark transition flex items-center justify-center space-x-2">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Download Syllabus PDF</span>
+        </button>
+        <button onclick="closeModal('modal-outline'); openEnrollModal('Enquired Course', 'Standard', 'Online')" class="flex-1 py-3 bg-brand-teal text-white rounded-xl text-xs font-bold hover:bg-brand-tealHover transition">
+          Enroll in This Course
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENROLL NOW MODAL -->
+  <div id="modal-enroll" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-xs font-bold text-brand-teal uppercase">Enrollment Portal</span>
+          <h3 id="modal-enroll-title" class="text-xl font-bold text-brand-navy font-heading mt-1">Course Registration</h3>
+          <p id="modal-enroll-sub" class="text-xs text-slate-500 mt-1">Reserve your seat in upcoming cohort</p>
+        </div>
+        <button onclick="closeModal('modal-enroll')" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <form onsubmit="handleQuickEnroll(event)" class="space-y-3.5 my-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
+          <input type="text" id="enroll-name" required placeholder="Your full name" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Corporate or Personal Email</label>
+          <input type="email" id="enroll-email" required placeholder="name@company.com" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone / WhatsApp</label>
+          <input type="tel" id="enroll-phone" required placeholder="+1 555 123 4567" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Training Mode</label>
+          <select id="enroll-mode" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+            <option>Live Virtual Class</option>
+            <option>Weekend Cohort</option>
+            <option>In-House Corporate Group</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full py-3 bg-brand-teal hover:bg-brand-tealHover text-white rounded-xl text-xs font-bold transition shadow-md mt-4">
+          Confirm Seat Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ACCREDITATION & CREDENTIAL VERIFICATION MODAL -->
+  <div id="modal-accreditation" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-xs font-bold text-brand-teal uppercase">Governance & Standards Compliance</span>
+          <h3 class="text-2xl font-bold text-brand-navy font-heading mt-1">Authorized Accreditation Disclosures</h3>
+        </div>
+        <button onclick="closeModal('modal-accreditation')" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 my-6 text-xs sm:text-sm text-slate-600">
+        <p>
+          Veritron Global operates in strict adherence to international qualification benchmarks. In compliance with advertising governance, we do not claim unverified recognition.
+        </p>
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+          <div class="flex items-start space-x-3">
+            <i data-lucide="award" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+            <div>
+              <p class="font-bold text-brand-navy">Exemplar Global & TPECS Pathway</p>
+              <p class="text-xs text-slate-500">Lead Auditor syllabi are structured in alignment with Exemplar Global competency criteria. Specific TPECS accreditation status for individual examination tracks is confirmed per published course cohort.</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+            <div>
+              <p class="font-bold text-brand-navy">ISO 19011:2018 Methodological Rigor</p>
+              <p class="text-xs text-slate-500">All auditing procedures, roleplays, and examination rubrics strictly mirror the latest guidance for auditing management systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex justify-end">
+        <button onclick="closeModal('modal-accreditation')" class="px-6 py-2.5 bg-brand-navy text-white rounded-xl text-xs font-bold">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE VERIFICATION PORTAL MODAL -->
+  <div id="modal-verify" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="text-xs font-bold text-brand-teal uppercase">Credential Registry</span>
+          <h3 class="text-xl font-bold text-brand-navy font-heading mt-1">Verify Certificate</h3>
+          <p class="text-xs text-slate-500 mt-1">Validate student authenticity & audit serial number</p>
+        </div>
+        <button onclick="closeModal('modal-verify')" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <form onsubmit="handleVerifyCertificate(event)" class="space-y-4 my-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Certificate Serial Number *</label>
+          <input type="text" id="verify-serial" required placeholder="e.g. VG-2026-42001-8910" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal uppercase">
+        </div>
+        <button type="submit" class="w-full py-3 bg-brand-teal hover:bg-brand-tealHover text-white rounded-xl text-xs font-bold transition">
+          Verify Credential Status
+        </button>
+      </form>
+      <div id="verify-result" class="hidden mt-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700"></div>
+    </div>
+  </div>
+
+  <!-- VIDEO TOUR MODAL -->
+  <div id="modal-video" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-brand-navyDark rounded-3xl max-w-3xl w-full p-6 text-white border border-white/10 relative">
+      <button onclick="closeModal('modal-video')" class="absolute top-4 right-4 p-2 text-slate-300 hover:text-white">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <div class="text-center py-10 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-brand-teal/20 text-brand-mint flex items-center justify-center mx-auto">
+          <i data-lucide="video" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-2xl font-bold font-heading">Veritron Global Corporate Training Walkthrough</h3>
+        <p class="text-sm text-slate-300 max-w-lg mx-auto">
+          Explore our state-of-the-art live virtual breakout rooms, auditor role-play methodology, and corporate client on-premise training experiences.
+        </p>
+        <div class="pt-4 flex justify-center gap-3">
+          <a href="#contact" onclick="closeModal('modal-video')" class="bg-brand-warmAccent px-6 py-2.5 rounded-xl font-bold text-xs">Request Virtual Cohort Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT LOGIC & DATA STORAGE                          -->
+  <!-- ======================================================== -->
+  <script>
+    // --- 1. COURSE CATALOGUE DATA (All 8 Standards + Types) ---
+    const defaultCourses = [
+      {
+        id: "c-42001",
+        standard: "ISO/IEC 42001:2023",
+        title: "Artificial Intelligence Management Systems Training",
+        category: "AI",
+        categoryLabel: "Artificial Intelligence",
+        level: "Lead Auditor",
+        duration: "40 Hours",
+        mode: "Online / In-House",
+        desc: "World-first certifiable standard for AI risk governance, safety, algorithmic fairness, and data transparency in enterprise operations.",
+        status: "Active 2023 Edition"
+      },
+      {
+        id: "c-42001-ia",
+        standard: "ISO/IEC 42001:2023",
+        title: "AI Internal Auditor Practitioner",
+        category: "AI",
+        categoryLabel: "Artificial Intelligence",
+        level: "Internal Auditor",
+        duration: "16 Hours",
+        mode: "Online / In-House",
+        desc: "Essential audit skills for conducting internal reviews of generative AI systems, machine learning pipelines, and risk assessments.",
+        status: "Active 2023 Edition"
+      },
+      {
+        id: "c-27001",
+        standard: "ISO/IEC 27001:2022",
+        title: "Information Security Management Systems Training",
+        category: "Security",
+        categoryLabel: "Information Security",
+        level: "Lead Auditor",
+        duration: "40 Hours",
+        mode: "Online / In-House",
+        desc: "Complete 5-day lead auditor qualification for ISMS under the latest 2022 standard and Annex A 93 cybersecurity controls.",
+        status: "Active 2022 Edition"
+      },
+      {
+        id: "c-27001-ia",
+        standard: "ISO/IEC 27001:2022",
+        title: "Information Security Internal Auditor",
+        category: "Security",
+        categoryLabel: "Information Security",
+        level: "Internal Auditor",
+        duration: "16 Hours",
+        mode: "Online / In-House",
+        desc: "Conducting internal security audits, threat profiling, vulnerability controls testing, and reporting compliant with ISO 19011.",
+        status: "Active 2022 Edition"
+      },
+      {
+        id: "c-9001",
+        standard: "ISO 9001:2015",
+        title: "Quality Management Systems Training",
+        category: "Quality",
+        categoryLabel: "Quality Management",
+        level: "Lead Auditor",
+        duration: "40 Hours",
+        mode: "Online / In-House",
+        desc: "The global benchmark in customer satisfaction, continual quality improvement, process audits, and management review.",
+        status: "Active Current Edition"
+      },
+      {
+        id: "c-13485",
+        standard: "ISO 13485:2016",
+        title: "Medical Devices Quality Management Training",
+        category: "Quality",
+        categoryLabel: "Quality Management",
+        level: "Lead Auditor",
+        duration: "40 Hours",
+        mode: "Online / In-House",
+        desc: "Specialized regulatory quality audit compliance for medical device design, manufacturing, traceability, and global market approvals.",
+        status: "Active Current Edition"
+      },
+      {
+        id: "c-16949",
+        standard: "IATF 16949:2016",
+        title: "Automotive Quality Management Systems Training",
+        category: "Automotive",
+        categoryLabel: "Automotive Quality",
+        level: "Internal Auditor",
+        duration: "24 Hours",
+        mode: "Online / In-House",
+        desc: "Defect prevention, supply chain variation reduction, Core Tools (FMEA, SPC, MSA, PPAP, APQP), and customer-specific automotive requirements.",
+        status: "Active Current Edition"
+      },
+      {
+        id: "c-14001",
+        standard: "ISO 14001:2015",
+        title: "Environmental Management Systems Training",
+        category: "Environment",
+        categoryLabel: "Environmental",
+        level: "Internal Auditor",
+        duration: "16 Hours",
+        mode: "Online / In-House",
+        desc: "Auditing carbon footprint metrics, environmental aspect-impact matrices, resource efficiency, and ESG sustainability compliance.",
+        status: "Active Current Edition"
+      },
+      {
+        id: "c-45001",
+        standard: "ISO 45001:2018",
+        title: "Occupational Health & Safety Management Training",
+        category: "Environment",
+        categoryLabel: "Health & Safety",
+        level: "Lead Auditor",
+        duration: "40 Hours",
+        mode: "Online / In-House",
+        desc: "Proactive hazard identification, worker wellness, workplace safety compliance, risk reduction, and safety culture auditing.",
+        status: "Active Current Edition"
+      },
+      {
+        id: "c-22000",
+        standard: "ISO 22000:2018",
+        title: "Food Safety Management Systems Training",
+        category: "Food",
+        categoryLabel: "Food Safety",
+        level: "Internal Auditor",
+        duration: "16 Hours",
+        mode: "Online / In-House",
+        desc: "Comprehensive food chain assurance integrating HACCP principles, prerequisite programs (PRPs), and hazard mitigation.",
+        status: "Active Current Edition"
+      }
+    ];
+
+    // --- State & Storage Initializers ---
+    let courses = JSON.parse(localStorage.getItem('vg_courses')) || defaultCourses;
+    let enquiries = JSON.parse(localStorage.getItem('vg_enquiries')) || [];
+    let currentCategory = 'All';
+    let currentLevel = 'All';
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      renderCourses();
+    });
+
+    // --- Course Catalogue Filtering & Rendering ---
+    function setCourseCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.classList.remove('active-cat', 'bg-brand-navy', 'text-white');
+        btn.classList.add('text-slate-600');
+      });
+      event.target.classList.add('active-cat', 'bg-brand-navy', 'text-white');
+      event.target.classList.remove('text-slate-600');
+      renderCourses();
+    }
+
+    function setLevelFilter(lvl) {
+      currentLevel = lvl;
+      document.querySelectorAll('.level-btn').forEach(btn => {
+        btn.classList.remove('active-level', 'bg-brand-teal', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-600');
+      });
+      event.target.classList.add('active-level', 'bg-brand-teal', 'text-white');
+      event.target.classList.remove('bg-white', 'text-slate-600');
+      renderCourses();
+    }
+
+    function filterByStandard(stdPrefix) {
+      document.getElementById('course-search').value = stdPrefix;
+      renderCourses();
+      const el = document.getElementById('courses');
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function renderCourses() {
+      const container = document.getElementById('course-cards-container');
+      const searchQuery = (document.getElementById('course-search').value || '').toLowerCase();
+
+      const filtered = courses.filter(c => {
+        const matchesCategory = currentCategory === 'All' || c.category === currentCategory;
+        const matchesLevel = currentLevel === 'All' || c.level === currentLevel;
+        const matchesSearch = c.standard.toLowerCase().includes(searchQuery) || 
+                              c.title.toLowerCase().includes(searchQuery) ||
+                              c.desc.toLowerCase().includes(searchQuery);
+        return matchesCategory && matchesLevel && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-3 text-center py-12 bg-white rounded-2xl border border-slate-200 p-6">
+            <i data-lucide="search-x" class="w-10 h-10 text-slate-400 mx-auto mb-2"></i>
+            <p class="font-bold text-brand-navy">No matching courses found</p>
+            <p class="text-xs text-slate-500 mt-1">Try resetting the filter or search with a different keyword.</p>
+            <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-brand-teal text-white rounded-lg text-xs font-bold">Reset Filters</button>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      container.innerHTML = filtered.map(c => `
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[11px] font-extrabold uppercase px-2.5 py-1 rounded bg-slate-100 text-brand-teal tracking-wider">
+                ${c.standard}
+              </span>
+              <span class="text-[10px] font-semibold text-slate-500">
+                ${c.status}
+              </span>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-base text-brand-navy leading-snug mb-2 group-hover:text-brand-teal transition">
+              ${c.title}
+            </h3>
+            
+            <p class="text-xs text-slate-600 line-clamp-3 mb-4 leading-relaxed">
+              ${c.desc}
+            </p>
+
+            <div class="space-y-1.5 pt-3 border-t border-slate-100 text-xs text-slate-500 mb-5">
+              <div class="flex items-center justify-between">
+                <span>Duration:</span>
+                <span class="font-semibold text-brand-navy">${c.duration}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Training Mode:</span>
+                <span class="font-semibold text-brand-navy">${c.mode}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Course Level:</span>
+                <span class="font-semibold text-brand-teal">${c.level}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-2 pt-2">
+            <button onclick="openCourseOutline('${c.title}', '${c.duration}', '${c.categoryLabel}')" class="w-1/2 py-2 border border-slate-300 hover:border-brand-teal rounded-lg text-xs font-bold text-slate-700 hover:text-brand-teal transition">
+              Course Outline
+            </button>
+            <button onclick="openEnrollModal('${c.title}', '${c.duration}', '${c.mode}')" class="w-1/2 py-2 bg-brand-teal hover:bg-brand-tealHover rounded-lg text-xs font-bold text-white transition">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function resetFilters() {
+      document.getElementById('course-search').value = '';
+      currentCategory = 'All';
+      currentLevel = 'All';
+      renderCourses();
+    }
+
+    // --- FAQ Accordion ---
+    function toggleFaq(id) {
+      const ans = document.getElementById(`faq-ans-1`);
+      for (let i = 1; i <= 8; i++) {
+        const curAns = document.getElementById(`faq-ans-${i}`);
+        const curIcon = document.getElementById(`faq-icon-${i}`);
+        if (i === id) {
+          if (curAns.classList.contains('hidden')) {
+            curAns.classList.remove('hidden');
+            curIcon.style.transform = 'rotate(180deg)';
+          } else {
+            curAns.classList.add('hidden');
+            curIcon.style.transform = 'rotate(0deg)';
+          }
+        } else {
+          curAns.classList.add('hidden');
+          curIcon.style.transform = 'rotate(0deg)';
+        }
+      }
+    }
+
+    // --- Modals Management ---
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    function openCourseOutline(title, dur, cat) {
+      document.getElementById('modal-outline-title').innerText = title;
+      document.getElementById('modal-outline-dur').innerText = `Duration: ${dur} • Online / In-House Cohort`;
+      document.getElementById('modal-outline-cat').innerText = cat;
+      openModal('modal-outline');
+    }
+
+    function openEnrollModal(title, dur, mode) {
+      document.getElementById('modal-enroll-title').innerText = title;
+      document.getElementById('modal-enroll-sub').innerText = `Duration: ${dur} • Mode: ${mode}`;
+      openModal('modal-enroll');
+    }
+
+    function openAccreditationModal() {
+      openModal('modal-accreditation');
+    }
+
+    function openVerifyCredentialModal() {
+      openModal('modal-verify');
+    }
+
+    function openVideoTourModal() {
+      openModal('modal-video');
+    }
+
+    function downloadCatalogueModal() {
+      alert("Downloading Veritron Global International Course Catalogue 2026 (PDF). Please check your browser downloads.");
+    }
+
+    function downloadPdfNotice() {
+      alert("Course Outline and Syllabus Specification Document generated successfully. Thank you for your interest.");
+      closeModal('modal-outline');
+    }
+
+    function openLegalModal(policyName) {
+      alert(`Veritron Global Official Document: ${policyName}\n\nOur full legal terms guarantee transparent customer rights, GDPR compliance, and accredited verification standards.`);
+    }
+
+    function filterAudience(type) {
+      alert(`Targeted Pathway for: ${type}\n\nOur admissions specialists have curated specialized curricula suited for ${type}. Please submit an enquiry to review cohort tracks.`);
+      const el = document.getElementById('contact');
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // --- Form Handlers ---
+    function handleEnquirySubmit(e) {
+      e.preventDefault();
+      const newEnquiry = {
+        name: document.getElementById('form-name').value,
+        email: document.getElementById('form-email').value,
+        phone: document.getElementById('form-phone').value,
+        org: document.getElementById('form-org').value,
+        country: document.getElementById('form-country').value,
+        course: document.getElementById('form-course').value,
+        mode: document.getElementById('form-mode').value,
+        batch: document.getElementById('form-batch').value,
+        msg: document.getElementById('form-msg').value,
+        date: new Date().toLocaleDateString()
+      };
+
+      enquiries.unshift(newEnquiry);
+      localStorage.setItem('vg_enquiries', JSON.stringify(enquiries));
+
+      document.getElementById('enquiry-form').classList.add('hidden');
+      document.getElementById('enquiry-success').classList.remove('hidden');
+    }
+
+    function resetEnquiryForm() {
+      document.getElementById('enquiry-form').reset();
+      document.getElementById('enquiry-form').classList.remove('hidden');
+      document.getElementById('enquiry-success').classList.add('hidden');
+    }
+
+    function handleQuickEnroll(e) {
+      e.preventDefault();
+      alert("Registration Request Received! Our coordinator will contact you with batch joining credentials.");
+      closeModal('modal-enroll');
+    }
+
+    function handleVerifyCertificate(e) {
+      e.preventDefault();
+      const serial = document.getElementById('verify-serial').value.trim();
+      const res = document.getElementById('verify-result');
+      res.classList.remove('hidden');
+      res.innerHTML = `
+        <div class="space-y-1">
+          <p class="font-bold text-emerald-600 flex items-center">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2"></span>
+            Valid Credential Record Found
+          </p>
+          <p><strong>Certificate ID:</strong> ${serial}</p>
+          <p><strong>Standard:</strong> ISO/IEC Accredited Auditor Competence</p>
+          <p><strong>Status:</strong> Active & Authenticated Globally</p>
+        </div>
+      `;
+    }
+
+    // --- Mobile Menu Toggle ---
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+  </script>
+
+</body>
+</html>

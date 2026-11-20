@@ -1,0 +1,22 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Custom utilities */
+.btn-primary {
+  @apply bg-primary text-white font-medium py-2 px-4 rounded hover:bg-primary/90 transition;
+}
+.btn-cta {
+  @apply bg-accent text-primary font-semibold py-2 px-6 rounded-full hover:bg-accent/90 transition;
+}
