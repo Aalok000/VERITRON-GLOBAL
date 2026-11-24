@@ -44,6 +44,7 @@ while ($listener.IsListening) {
                 ".png"  { $response.ContentType = "image/png" }
                 ".jpg"  { $response.ContentType = "image/jpeg" }
                 ".jpeg" { $response.ContentType = "image/jpeg" }
+                ".webp" { $response.ContentType = "image/webp" }
                 ".svg"  { $response.ContentType = "image/svg+xml" }
                 default { $response.ContentType = "text/plain; charset=utf-8" }
             }
