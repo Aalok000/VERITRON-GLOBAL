@@ -49,6 +49,10 @@
   </script>
 
   <style>
+    html {
+      -webkit-tap-highlight-color: transparent;
+      scroll-padding-top: 5.5rem;
+    }
     body {
       color: #1E293B;
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -61,16 +65,29 @@
     .hero-gradient {
       background: radial-gradient(135% 100% at 90% 10%, #183D61 0%, #102B46 60%, #0B1D30 100%);
     }
+    @media (max-width: 640px) {
+      .hero-gradient {
+        background: linear-gradient(180deg, #183D61 0%, #102B46 60%, #0B1D30 100%);
+      }
+    }
     .badge-glow {
       box-shadow: 0 0 15px rgba(8, 127, 140, 0.2);
     }
     .glass-nav {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
     }
-    /* Custom scrollbar */
+    /* Hide scrollbars for pill carousels while keeping swipe functional */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Custom scrollbar for desktop */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 7px;
     }
     ::-webkit-scrollbar-track {
       background: #F1F5F9;
@@ -109,11 +126,11 @@
   <!-- STICKY NAVIGATION BAR -->
   <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200 transition-all duration-300 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-24">
+      <div class="flex justify-between items-center h-20 sm:h-24">
         
         <!-- BRAND LOGO -->
         <a href="#home" class="flex items-center group py-2">
-          <img src="images/veritron-logo-transparent.png" alt="VERITRON GLOBAL" class="h-14 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform group-hover:scale-105">
+          <img src="images/veritron-logo-transparent.png" alt="VERITRON GLOBAL" class="h-12 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform group-hover:scale-105">
         </a>
 
         <!-- DESKTOP NAVIGATION -->
@@ -137,7 +154,7 @@
 
         <!-- MOBILE MENU BUTTON -->
         <div class="lg:hidden flex items-center space-x-2">
-          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-slate-700 hover:text-brand-teal focus:outline-none">
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 hover:text-brand-teal hover:bg-slate-100 flex items-center justify-center transition focus:outline-none">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -146,16 +163,68 @@
     </div>
 
     <!-- MOBILE DROPDOWN -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3 shadow-lg">
-      <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Home</a>
-      <a href="#whoweTrain" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Who We Train</a>
-      <a href="#courses" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Training Programs</a>
-      <a href="#accreditations" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Accreditations</a>
-      <a href="#industries" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Industries</a>
-      <a href="#process" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Process</a>
-      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-semibold hover:text-brand-teal">Contact Us</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-4 py-4 space-y-1 shadow-xl transition-all">
+      <a href="#home" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="home" class="w-4 h-4 text-brand-teal"></i>
+          <span>Home</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#whoweTrain" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="users" class="w-4 h-4 text-brand-teal"></i>
+          <span>Who We Train</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#courses" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="book-open" class="w-4 h-4 text-brand-teal"></i>
+          <span>Training Programs</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#accreditations" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="shield-check" class="w-4 h-4 text-brand-teal"></i>
+          <span>Accreditations</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#industries" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="building" class="w-4 h-4 text-brand-teal"></i>
+          <span>Industries</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#process" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="git-merge" class="w-4 h-4 text-brand-teal"></i>
+          <span>Process</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="help-circle" class="w-4 h-4 text-brand-teal"></i>
+          <span>FAQ</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="mail" class="w-4 h-4 text-brand-teal"></i>
+          <span>Contact Us</span>
+        </span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
       <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
-        <a href="#courses" onclick="toggleMobileMenu()" class="w-full text-center bg-brand-teal text-white py-3 rounded-lg font-bold">Explore Courses</a>
+        <a href="#courses" onclick="toggleMobileMenu()" class="w-full text-center bg-brand-teal hover:bg-brand-tealHover text-white py-3 rounded-xl font-bold text-sm shadow-md transition flex items-center justify-center space-x-2">
+          <span>Explore All 8 Disciplines</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
       </div>
     </div>
   </nav>
@@ -179,30 +248,30 @@
           </div>
 
           <!-- Main Headline -->
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold leading-[1.15] tracking-tight">
+          <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-extrabold leading-[1.15] tracking-tight">
             Empowering Professionals with <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint via-teal-200 to-white">Global Standards</span>
           </h1>
 
           <!-- Supporting Text -->
-          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          <p class="text-slate-300 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
             Advance your career with industry-focused professional training. Develop deep expertise in Quality Management, Information Security, Artificial Intelligence, Environmental Management, and Automotive Standards through expert-led training programs.
           </p>
 
-          <!-- Trust Indicators 4-Item Grid -->
-          <div class="grid grid-cols-2 gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
-            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+          <!-- Trust Indicators Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
+            <div class="flex items-center space-x-2.5 text-xs sm:text-sm text-slate-200 bg-white/5 sm:bg-transparent p-2 sm:p-0 rounded-lg">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
               <span>Professional Training Programs</span>
             </div>
-            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+            <div class="flex items-center space-x-2.5 text-xs sm:text-sm text-slate-200 bg-white/5 sm:bg-transparent p-2 sm:p-0 rounded-lg">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
               <span>Experienced Industry Trainers</span>
             </div>
-            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+            <div class="flex items-center space-x-2.5 text-xs sm:text-sm text-slate-200 bg-white/5 sm:bg-transparent p-2 sm:p-0 rounded-lg">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
               <span>Online & In-House Learning</span>
             </div>
-            <div class="flex items-center space-x-2 text-xs sm:text-sm text-slate-200">
+            <div class="flex items-center space-x-2.5 text-xs sm:text-sm text-slate-200 bg-white/5 sm:bg-transparent p-2 sm:p-0 rounded-lg">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-mint flex-shrink-0"></i>
               <span>Flexible Training Schedules</span>
             </div>
@@ -631,31 +700,31 @@
             id="course-search" 
             oninput="renderCourses()" 
             placeholder="Search ISO standard, title, keyword..." 
-            class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal"
+            class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal"
           />
         </div>
 
         <!-- Discipline Category Filters -->
-        <div class="flex items-center space-x-1.5 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none" id="category-pills">
-          <button onclick="setCourseCategory('All')" class="cat-pill active-cat px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-navy text-white transition whitespace-nowrap">All Standards</button>
-          <button onclick="setCourseCategory('Quality')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Quality</button>
-          <button onclick="setCourseCategory('Security')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">InfoSec</button>
-          <button onclick="setCourseCategory('AI')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Artificial Intelligence</button>
-          <button onclick="setCourseCategory('Environment')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Environment & Safety</button>
-          <button onclick="setCourseCategory('Automotive')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Automotive</button>
-          <button onclick="setCourseCategory('Food')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">Food Safety</button>
+        <div class="flex items-center space-x-1.5 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar touch-pan-x" id="category-pills">
+          <button onclick="setCourseCategory('All')" class="cat-pill active-cat px-3.5 py-1.5 rounded-lg text-xs font-bold bg-brand-navy text-white transition whitespace-nowrap flex-shrink-0">All Standards</button>
+          <button onclick="setCourseCategory('Quality')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap flex-shrink-0">Quality</button>
+          <button onclick="setCourseCategory('Security')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap flex-shrink-0">InfoSec</button>
+          <button onclick="setCourseCategory('AI')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap flex-shrink-0">Artificial Intelligence</button>
+          <button onclick="setCourseCategory('Environment')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap flex-shrink-0">Environment & Safety</button>
+          <button onclick="setCourseCategory('Automotive')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap flex-shrink-0">Automotive</button>
+          <button onclick="setCourseCategory('Food')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap flex-shrink-0">Food Safety</button>
         </div>
       </div>
 
       <!-- Course Level Tabs (Awareness, Foundation, Internal Auditor, Lead Auditor, Implementation) -->
-      <div class="flex items-center space-x-2 mb-8 overflow-x-auto pb-1 text-xs font-medium text-slate-500">
-        <span class="font-bold text-brand-navy mr-2">Course Level:</span>
-        <button onclick="setLevelFilter('All')" class="level-btn active-level bg-brand-teal text-white px-3 py-1 rounded-full">All Levels</button>
-        <button onclick="setLevelFilter('Awareness')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Awareness (4h)</button>
-        <button onclick="setLevelFilter('Foundation')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Foundation (8h)</button>
-        <button onclick="setLevelFilter('Internal Auditor')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Internal Auditor (16h)</button>
-        <button onclick="setLevelFilter('Lead Auditor')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Lead Auditor (40h)</button>
-        <button onclick="setLevelFilter('Implementation')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-50">Implementation (24h)</button>
+      <div class="flex items-center space-x-2 mb-8 overflow-x-auto pb-2 text-xs font-medium text-slate-500 no-scrollbar touch-pan-x">
+        <span class="font-bold text-brand-navy mr-2 whitespace-nowrap flex-shrink-0">Course Level:</span>
+        <button onclick="setLevelFilter('All')" class="level-btn active-level bg-brand-teal text-white px-3.5 py-1.5 rounded-full whitespace-nowrap flex-shrink-0">All Levels</button>
+        <button onclick="setLevelFilter('Awareness')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3.5 py-1.5 rounded-full hover:bg-slate-50 whitespace-nowrap flex-shrink-0">Awareness (4h)</button>
+        <button onclick="setLevelFilter('Foundation')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3.5 py-1.5 rounded-full hover:bg-slate-50 whitespace-nowrap flex-shrink-0">Foundation (8h)</button>
+        <button onclick="setLevelFilter('Internal Auditor')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3.5 py-1.5 rounded-full hover:bg-slate-50 whitespace-nowrap flex-shrink-0">Internal Auditor (16h)</button>
+        <button onclick="setLevelFilter('Lead Auditor')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3.5 py-1.5 rounded-full hover:bg-slate-50 whitespace-nowrap flex-shrink-0">Lead Auditor (40h)</button>
+        <button onclick="setLevelFilter('Implementation')" class="level-btn bg-white border border-slate-200 text-slate-600 px-3.5 py-1.5 rounded-full hover:bg-slate-50 whitespace-nowrap flex-shrink-0">Implementation (24h)</button>
       </div>
 
       <!-- Live Dynamic Course Cards Grid (Populated via JS & Editable via Admin) -->
@@ -1479,33 +1548,33 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name *</label>
-                  <input type="text" id="form-name" required placeholder="e.g. Dr. Alexander Vance" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <input type="text" id="form-name" required placeholder="e.g. Dr. Alexander Vance" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address *</label>
-                  <input type="email" id="form-email" required placeholder="alexander@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <input type="email" id="form-email" required placeholder="alexander@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Contact Number (with Country Code) *</label>
-                  <input type="tel" id="form-phone" required placeholder="+1 555 019 2831" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <input type="tel" id="form-phone" required placeholder="+1 555 019 2831" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Organization / Employer</label>
-                  <input type="text" id="form-org" placeholder="e.g. Global Tech Solutions Ltd." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <input type="text" id="form-org" placeholder="e.g. Global Tech Solutions Ltd." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Country *</label>
-                  <input type="text" id="form-country" required placeholder="e.g. United Kingdom" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <input type="text" id="form-country" required placeholder="e.g. United Kingdom" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Interested Course *</label>
-                  <select id="form-course" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <select id="form-course" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                     <option value="">-- Select Standard / Course --</option>
                     <option value="ISO/IEC 42001:2023 Artificial Intelligence Lead Auditor">ISO/IEC 42001:2023 AI Lead Auditor</option>
                     <option value="ISO/IEC 42001:2023 Artificial Intelligence Internal Auditor">ISO/IEC 42001:2023 AI Internal Auditor</option>
@@ -1524,7 +1593,7 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Training Mode *</label>
-                  <select id="form-mode" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <select id="form-mode" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                     <option value="Live Virtual Online">Live Virtual Online</option>
                     <option value="In-House Corporate">In-House Corporate</option>
                     <option value="Hybrid Custom">Hybrid Custom</option>
@@ -1532,7 +1601,7 @@
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Preferred Batch Timing</label>
-                  <select id="form-batch" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <select id="form-batch" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
                     <option value="Immediate Upcoming Batch">Immediate Upcoming Batch</option>
                     <option value="Next Month">Next Month</option>
                     <option value="Weekend Schedule Only">Weekend Schedule Only</option>
@@ -1543,7 +1612,7 @@
 
               <div>
                 <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message or Specific Objectives</label>
-                <textarea id="form-msg" rows="3" placeholder="Tell us about your team size, prior auditing experience, or specific certification goals..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal"></textarea>
+                <textarea id="form-msg" rows="3" placeholder="Tell us about your team size, prior auditing experience, or specific certification goals..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal"></textarea>
               </div>
 
               <div class="pt-2">
@@ -1684,7 +1753,7 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON (with quick chat prompt) -->
-  <div class="fixed bottom-6 right-6 z-40 flex items-center space-x-2">
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center space-x-2">
     <div id="whatsapp-tooltip" class="hidden sm:block bg-white text-slate-800 text-xs font-semibold py-1.5 px-3 rounded-xl shadow-lg border border-slate-200 animate-pulse">
       💬 Chat with Admissions Team
     </div>
@@ -1692,10 +1761,10 @@
       href="https://wa.me/18004128930?text=Hello%20Veritron%20Global,%20I%20am%20interested%20in%20ISO%20Auditor%20Training%20programs." 
       target="_blank" 
       rel="noopener noreferrer" 
-      class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+      class="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
       title="Contact on WhatsApp"
     >
-      <i data-lucide="message-circle" class="w-7 h-7"></i>
+      <i data-lucide="message-circle" class="w-6 h-6 sm:w-7 sm:h-7"></i>
     </a>
   </div>
 
@@ -1772,25 +1841,25 @@
       <form onsubmit="handleQuickEnroll(event)" class="space-y-3.5 my-4">
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name</label>
-          <input type="text" id="enroll-name" required placeholder="Your full name" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+          <input type="text" id="enroll-name" required placeholder="Your full name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Corporate or Personal Email</label>
-          <input type="email" id="enroll-email" required placeholder="name@company.com" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+          <input type="email" id="enroll-email" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone / WhatsApp</label>
-          <input type="tel" id="enroll-phone" required placeholder="+1 555 123 4567" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+          <input type="tel" id="enroll-phone" required placeholder="+1 555 123 4567" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Training Mode</label>
-          <select id="enroll-mode" class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
+          <select id="enroll-mode" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal">
             <option>Live Virtual Class</option>
             <option>Weekend Cohort</option>
             <option>In-House Corporate Group</option>
           </select>
         </div>
-        <button type="submit" class="w-full py-3 bg-brand-teal hover:bg-brand-tealHover text-white rounded-xl text-xs font-bold transition shadow-md mt-4">
+        <button type="submit" class="w-full py-3.5 bg-brand-teal hover:bg-brand-tealHover text-white rounded-xl text-xs sm:text-sm font-bold transition shadow-md mt-4">
           Confirm Seat Reservation
         </button>
       </form>
@@ -1860,9 +1929,9 @@
       <form onsubmit="handleVerifyCertificate(event)" class="space-y-4 my-4">
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Certificate Serial Number *</label>
-          <input type="text" id="verify-serial" required placeholder="e.g. VG-2026-42001-8910" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal uppercase">
+          <input type="text" id="verify-serial" required placeholder="e.g. VG-2026-42001-8910" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal uppercase">
         </div>
-        <button type="submit" class="w-full py-3 bg-brand-teal hover:bg-brand-tealHover text-white rounded-xl text-xs font-bold transition">
+        <button type="submit" class="w-full py-3.5 bg-brand-teal hover:bg-brand-tealHover text-white rounded-xl text-xs sm:text-sm font-bold transition">
           Verify Credential Status
         </button>
       </form>
@@ -2126,10 +2195,10 @@
           </div>
 
           <div class="flex gap-2 pt-2">
-            <button onclick="openCourseOutline('${c.title}', '${c.duration}', '${c.categoryLabel}')" class="w-1/2 py-2 border border-slate-300 hover:border-brand-teal rounded-lg text-xs font-bold text-slate-700 hover:text-brand-teal transition">
+            <button onclick="openCourseOutline('${c.title}', '${c.duration}', '${c.categoryLabel}')" class="w-1/2 py-2.5 border border-slate-300 hover:border-brand-teal rounded-xl text-xs font-bold text-slate-700 hover:text-brand-teal transition">
               Course Outline
             </button>
-            <button onclick="openEnrollModal('${c.title}', '${c.duration}', '${c.mode}')" class="w-1/2 py-2 bg-brand-teal hover:bg-brand-tealHover rounded-lg text-xs font-bold text-white transition">
+            <button onclick="openEnrollModal('${c.title}', '${c.duration}', '${c.mode}')" class="w-1/2 py-2.5 bg-brand-teal hover:bg-brand-tealHover rounded-xl text-xs font-bold text-white transition">
               Enroll Now
             </button>
           </div>
@@ -2280,7 +2349,16 @@
     // --- Mobile Menu Toggle ---
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
+      const btn = document.getElementById('mobile-menu-btn');
+      const isClosed = menu.classList.contains('hidden');
+      if (isClosed) {
+        menu.classList.remove('hidden');
+        btn.innerHTML = '<i data-lucide="x" class="w-6 h-6 text-brand-teal"></i>';
+      } else {
+        menu.classList.add('hidden');
+        btn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+      }
+      lucide.createIcons();
     }
 
   </script>
