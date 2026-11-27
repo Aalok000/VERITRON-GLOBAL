@@ -142,6 +142,10 @@
           <a href="#home" class="hover:text-brand-teal transition py-1">Home</a>
           <a href="#whoweTrain" class="hover:text-brand-teal transition py-1">Who We Train</a>
           <a href="#courses" class="hover:text-brand-teal transition py-1">Training Programs</a>
+          <a href="#calendar" class="hover:text-brand-teal text-brand-teal font-bold transition py-1 flex items-center space-x-1.5">
+            <span>Upcoming Batches</span>
+            <span class="w-2 h-2 rounded-full bg-brand-warmAccent animate-pulse"></span>
+          </a>
           <a href="#accreditations" class="hover:text-brand-teal transition py-1">Accreditations</a>
           <a href="#industries" class="hover:text-brand-teal transition py-1">Industries</a>
           <a href="#process" class="hover:text-brand-teal transition py-1">Process</a>
@@ -188,6 +192,13 @@
           <span>Training Programs</span>
         </span>
         <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+      </a>
+      <a href="#calendar" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
+        <span class="flex items-center space-x-3">
+          <i data-lucide="calendar" class="w-4 h-4 text-brand-teal"></i>
+          <span>Upcoming Batches</span>
+        </span>
+        <span class="text-[10px] bg-brand-warmAccent text-white px-2 py-0.5 rounded-full font-bold">New Dates</span>
       </a>
       <a href="#accreditations" onclick="toggleMobileMenu()" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-slate-700 font-semibold hover:bg-slate-50 hover:text-brand-teal transition text-sm">
         <span class="flex items-center space-x-3">
@@ -749,6 +760,89 @@
       <div class="mt-8 text-center text-xs text-slate-500 flex items-center justify-center space-x-2">
         <i data-lucide="info" class="w-4 h-4 text-brand-teal"></i>
         <span>All course details, publication statuses, durations, and syllabi are verified and updatable via the admin console.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. UPCOMING TRAINING BATCHES & CALENDAR SECTION -->
+  <section id="calendar" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-brand-teal bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-teal"></i>
+          <span>Official 2026 - 2027 Training Schedule</span>
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-4 font-heading">
+          Upcoming Training Batches
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base leading-relaxed">
+          Guaranteed live cohorts led by accredited lead auditors. Choose your standard, select your preferred month and schedule, and reserve your seat.
+        </p>
+      </div>
+
+      <!-- Controls: Month Tabs & Standard Filters -->
+      <div class="bg-brand-slateBg p-4 sm:p-5 rounded-2xl border border-slate-200 mb-8 space-y-4 shadow-sm">
+        
+        <!-- Month Tabs -->
+        <div class="flex items-center justify-between flex-wrap gap-3 pb-3 border-b border-slate-200">
+          <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar touch-pan-x w-full sm:w-auto" id="batch-month-pills">
+            <button onclick="setBatchMonth('All')" class="batch-month-btn active-batch-month px-4 py-2 rounded-xl text-xs font-bold bg-brand-navy text-white transition whitespace-nowrap shadow-sm">All Upcoming Batches</button>
+            <button onclick="setBatchMonth('2026-12')" class="batch-month-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 transition whitespace-nowrap">December 2026</button>
+            <button onclick="setBatchMonth('2027-01')" class="batch-month-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 transition whitespace-nowrap">January 2027</button>
+            <button onclick="setBatchMonth('2027-02')" class="batch-month-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 transition whitespace-nowrap">February 2027</button>
+          </div>
+          
+          <div class="text-xs font-semibold text-slate-500 flex items-center space-x-2 ml-auto sm:ml-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Live Interactive Virtual & Corporate Batches</span>
+          </div>
+        </div>
+
+        <!-- Discipline Category Filters -->
+        <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar touch-pan-x text-xs" id="batch-category-pills">
+          <span class="font-bold text-brand-navy mr-1 whitespace-nowrap flex-shrink-0">Filter by Standard:</span>
+          <button onclick="setBatchCategory('All')" class="batch-cat-btn active-batch-cat px-3 py-1.5 rounded-lg font-bold bg-brand-teal text-white whitespace-nowrap flex-shrink-0">All Disciplines</button>
+          <button onclick="setBatchCategory('AI')" class="batch-cat-btn px-3 py-1.5 rounded-lg font-medium bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 whitespace-nowrap flex-shrink-0">ISO 42001 (AI)</button>
+          <button onclick="setBatchCategory('Security')" class="batch-cat-btn px-3 py-1.5 rounded-lg font-medium bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 whitespace-nowrap flex-shrink-0">ISO 27001 (InfoSec)</button>
+          <button onclick="setBatchCategory('Quality')" class="batch-cat-btn px-3 py-1.5 rounded-lg font-medium bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 whitespace-nowrap flex-shrink-0">ISO 9001 (Quality)</button>
+          <button onclick="setBatchCategory('Automotive')" class="batch-cat-btn px-3 py-1.5 rounded-lg font-medium bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 whitespace-nowrap flex-shrink-0">IATF 16949 (Auto)</button>
+          <button onclick="setBatchCategory('Environment')" class="batch-cat-btn px-3 py-1.5 rounded-lg font-medium bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 whitespace-nowrap flex-shrink-0">ISO 14001 / 45001</button>
+          <button onclick="setBatchCategory('Food')" class="batch-cat-btn px-3 py-1.5 rounded-lg font-medium bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 whitespace-nowrap flex-shrink-0">ISO 22000 (Food Safety)</button>
+        </div>
+
+      </div>
+
+      <!-- Live Dynamic Batches Cards Container -->
+      <div id="batches-cards-container" class="space-y-4">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Dedicated Corporate Batch Scheduling Box -->
+      <div class="mt-12 bg-gradient-to-r from-brand-navy to-brand-navyLight rounded-3xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-white/10">
+        <div class="space-y-1.5 text-center md:text-left">
+          <div class="inline-flex items-center space-x-2 text-brand-mint text-xs font-bold uppercase tracking-wider">
+            <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+            <span>Need Custom Corporate Dates?</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold font-heading">
+            Dedicated In-House & Custom Cohorts Available
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm max-w-xl">
+            We deliver private cohorts structured around your operational shift patterns and company time-zones for enterprise teams of 3 or more candidates.
+          </p>
+        </div>
+        <div class="flex-shrink-0 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+          <a href="#contact" class="bg-brand-mint hover:bg-teal-300 text-brand-navy font-extrabold px-6 py-3 rounded-xl text-sm transition text-center shadow-md">
+            Request Custom Dates
+          </a>
+          <a href="https://wa.me/919149010051?text=Hello%20Veritron%20Global,%20we%20require%20a%20dedicated%20corporate%20training%20batch%20schedule." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-3 rounded-xl text-sm transition text-center flex items-center justify-center space-x-2">
+            <i data-lucide="message-circle" class="w-4 h-4 text-brand-mint"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
       </div>
 
     </div>
@@ -1708,6 +1802,7 @@
           <ul class="space-y-2 text-xs text-slate-400">
             <li><a href="#home" class="hover:text-brand-mint transition">About Us</a></li>
             <li><a href="#courses" class="hover:text-brand-mint transition">Training Programs</a></li>
+            <li><a href="#calendar" class="hover:text-brand-mint text-brand-mint font-semibold transition flex items-center space-x-1"><span>Upcoming Batches</span><span class="w-1.5 h-1.5 rounded-full bg-brand-warmAccent"></span></a></li>
             <li><a href="#accreditations" class="hover:text-brand-mint transition">Accreditations</a></li>
             <li><a href="#industries" class="hover:text-brand-mint transition">Industries We Serve</a></li>
             <li><a href="#faq" class="hover:text-brand-mint transition">Knowledge Base & FAQ</a></li>
@@ -2097,11 +2192,260 @@
     let currentCategory = 'All';
     let currentLevel = 'All';
 
+    // --- Upcoming Batches Calendar Dataset ---
+    const defaultBatches = [
+      {
+        id: "b-42001-dec",
+        standard: "ISO/IEC 42001:2023",
+        title: "Artificial Intelligence Management (AIMS) Lead Auditor",
+        category: "AI",
+        monthKey: "2026-12",
+        dates: "Dec 05 – Dec 09, 2026",
+        dayDisplay: "05",
+        monthDisplay: "DEC",
+        timing: "09:30 AM – 05:30 PM IST",
+        scheduleType: "Weekend & Fast-Track",
+        duration: "40 Hours (5 Days)",
+        mode: "Live Virtual Classroom",
+        seatsRemaining: 4,
+        statusBadge: "Few Seats Left",
+        badgeBg: "bg-amber-100 text-amber-800 border-amber-200"
+      },
+      {
+        id: "b-27001-dec",
+        standard: "ISO/IEC 27001:2022",
+        title: "Information Security Management (ISMS) Lead Auditor",
+        category: "Security",
+        monthKey: "2026-12",
+        dates: "Dec 12 – Dec 16, 2026",
+        dayDisplay: "12",
+        monthDisplay: "DEC",
+        timing: "09:30 AM – 05:30 PM IST",
+        scheduleType: "Weekend & Weekday Track",
+        duration: "40 Hours (5 Days)",
+        mode: "Live Virtual Classroom",
+        seatsRemaining: 3,
+        statusBadge: "Filling Fast",
+        badgeBg: "bg-rose-100 text-rose-800 border-rose-200"
+      },
+      {
+        id: "b-9001-dec",
+        standard: "ISO 9001:2015",
+        title: "Quality Management Systems (QMS) Lead Auditor Certification",
+        category: "Quality",
+        monthKey: "2026-12",
+        dates: "Dec 19 – Dec 23, 2026",
+        dayDisplay: "19",
+        monthDisplay: "DEC",
+        timing: "10:00 AM – 06:00 PM IST",
+        scheduleType: "Weekend Track",
+        duration: "40 Hours (5 Days)",
+        mode: "Live Virtual / Hybrid",
+        seatsRemaining: 6,
+        statusBadge: "Registration Open",
+        badgeBg: "bg-emerald-100 text-emerald-800 border-emerald-200"
+      },
+      {
+        id: "b-16949-jan",
+        standard: "IATF 16949:2016",
+        title: "Automotive Quality Management Systems Internal Auditor",
+        category: "Automotive",
+        monthKey: "2027-01",
+        dates: "Jan 09 – Jan 11, 2027",
+        dayDisplay: "09",
+        monthDisplay: "JAN",
+        timing: "09:30 AM – 05:30 PM IST",
+        scheduleType: "Weekend Cohort",
+        duration: "24 Hours (3 Days)",
+        mode: "Live Virtual Online",
+        seatsRemaining: 5,
+        statusBadge: "Registration Open",
+        badgeBg: "bg-emerald-100 text-emerald-800 border-emerald-200"
+      },
+      {
+        id: "b-42001-jan",
+        standard: "ISO/IEC 42001:2023",
+        title: "AI Management Systems (AIMS) Internal Auditor Intensive",
+        category: "AI",
+        monthKey: "2027-01",
+        dates: "Jan 16 – Jan 17, 2027",
+        dayDisplay: "16",
+        monthDisplay: "JAN",
+        timing: "10:00 AM – 06:00 PM IST",
+        scheduleType: "Weekend Intensive (Sat-Sun)",
+        duration: "16 Hours (2 Days)",
+        mode: "Live Virtual Classroom",
+        seatsRemaining: 8,
+        statusBadge: "Early Bird Open",
+        badgeBg: "bg-teal-100 text-teal-800 border-teal-200"
+      },
+      {
+        id: "b-14001-jan",
+        standard: "ISO 14001:2015 & ISO 45001:2018",
+        title: "Integrated EHS Management Systems Lead Auditor",
+        category: "Environment",
+        monthKey: "2027-01",
+        dates: "Jan 23 – Jan 27, 2027",
+        dayDisplay: "23",
+        monthDisplay: "JAN",
+        timing: "09:30 AM – 05:30 PM IST",
+        scheduleType: "Regular Cohort",
+        duration: "40 Hours (5 Days)",
+        mode: "Live Virtual / Corporate",
+        seatsRemaining: 5,
+        statusBadge: "Registration Open",
+        badgeBg: "bg-emerald-100 text-emerald-800 border-emerald-200"
+      },
+      {
+        id: "b-27001-feb",
+        standard: "ISO/IEC 27001:2022",
+        title: "ISMS Information Security Lead Auditor Certification",
+        category: "Security",
+        monthKey: "2027-02",
+        dates: "Feb 06 – Feb 10, 2027",
+        dayDisplay: "06",
+        monthDisplay: "FEB",
+        timing: "09:30 AM – 05:30 PM IST",
+        scheduleType: "Weekend & Evening Track",
+        duration: "40 Hours (5 Days)",
+        mode: "Live Virtual Online",
+        seatsRemaining: 9,
+        statusBadge: "Admissions Open",
+        badgeBg: "bg-teal-100 text-teal-800 border-teal-200"
+      },
+      {
+        id: "b-22000-feb",
+        standard: "ISO 22000:2018",
+        title: "Food Safety Management Systems (FSMS) Auditor Training",
+        category: "Food",
+        monthKey: "2027-02",
+        dates: "Feb 20 – Feb 21, 2027",
+        dayDisplay: "20",
+        monthDisplay: "FEB",
+        timing: "10:00 AM – 06:00 PM IST",
+        scheduleType: "Weekend Batch (Sat-Sun)",
+        duration: "16 Hours (2 Days)",
+        mode: "Live Virtual Classroom",
+        seatsRemaining: 7,
+        statusBadge: "Admissions Open",
+        badgeBg: "bg-emerald-100 text-emerald-800 border-emerald-200"
+      }
+    ];
+
+    let batches = defaultBatches;
+    let currentBatchMonth = 'All';
+    let currentBatchCategory = 'All';
+
     // Initialize Page
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
       renderCourses();
+      renderBatches();
     });
+
+    function setBatchMonth(month) {
+      currentBatchMonth = month;
+      document.querySelectorAll('.batch-month-btn').forEach(btn => {
+        btn.classList.remove('active-batch-month', 'bg-brand-navy', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-white', 'text-slate-700');
+      });
+      event.target.classList.add('active-batch-month', 'bg-brand-navy', 'text-white', 'shadow-sm');
+      event.target.classList.remove('bg-white', 'text-slate-700');
+      renderBatches();
+    }
+
+    function setBatchCategory(cat) {
+      currentBatchCategory = cat;
+      document.querySelectorAll('.batch-cat-btn').forEach(btn => {
+        btn.classList.remove('active-batch-cat', 'bg-brand-teal', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-600');
+      });
+      event.target.classList.add('active-batch-cat', 'bg-brand-teal', 'text-white');
+      event.target.classList.remove('bg-white', 'text-slate-600');
+      renderBatches();
+    }
+
+    function renderBatches() {
+      const container = document.getElementById('batches-cards-container');
+      if (!container) return;
+
+      const filtered = batches.filter(b => {
+        const matchesMonth = currentBatchMonth === 'All' || b.monthKey === currentBatchMonth;
+        const matchesCategory = currentBatchCategory === 'All' || b.category === currentBatchCategory;
+        return matchesMonth && matchesCategory;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 bg-white rounded-2xl border border-slate-200 p-6">
+            <i data-lucide="calendar-x" class="w-10 h-10 text-slate-400 mx-auto mb-2"></i>
+            <p class="font-bold text-brand-navy">No batches found for this selection</p>
+            <p class="text-xs text-slate-500 mt-1">Try selecting another month or discipline, or contact admissions for bespoke dates.</p>
+            <button onclick="setBatchMonth('All'); setBatchCategory('All');" class="mt-4 px-4 py-2 bg-brand-teal text-white rounded-lg text-xs font-bold">Reset Calendar Filters</button>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      container.innerHTML = filtered.map(b => `
+        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col lg:flex-row lg:items-center justify-between gap-5 group hover:border-brand-teal/40">
+          
+          <div class="flex items-start sm:items-center space-x-4 sm:space-x-5">
+            <!-- Calendar Date Callout Box -->
+            <div class="flex flex-col items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-brand-slateBg border border-slate-200 text-center flex-shrink-0 group-hover:border-brand-teal group-hover:bg-teal-50/50 transition">
+              <span class="text-[10px] sm:text-[11px] font-black tracking-wider text-brand-teal uppercase">${b.monthDisplay}</span>
+              <span class="text-xl sm:text-2xl font-black text-brand-navy font-heading leading-tight">${b.dayDisplay}</span>
+              <span class="text-[9px] font-semibold text-slate-500 uppercase">Start</span>
+            </div>
+
+            <!-- Core Batch Information -->
+            <div class="space-y-1.5">
+              <div class="flex items-center flex-wrap gap-2">
+                <span class="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded bg-slate-100 text-brand-teal tracking-wider">
+                  ${b.standard}
+                </span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full border ${b.badgeBg}">
+                  ${b.statusBadge} (${b.seatsRemaining} seats left)
+                </span>
+                <span class="text-[10px] text-slate-500 font-medium hidden sm:inline-flex items-center">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-teal mr-1"></i>
+                  Exemplar Global Aligned
+                </span>
+              </div>
+
+              <h3 class="font-heading font-extrabold text-base sm:text-lg text-brand-navy group-hover:text-brand-teal transition">
+                ${b.title}
+              </h3>
+
+              <div class="flex items-center flex-wrap gap-x-4 gap-y-1 text-xs text-slate-600">
+                <span class="flex items-center"><i data-lucide="calendar" class="w-3.5 h-3.5 text-slate-400 mr-1.5"></i><strong>${b.dates}</strong></span>
+                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400 mr-1.5"></i>${b.timing}</span>
+                <span class="flex items-center"><i data-lucide="video" class="w-3.5 h-3.5 text-slate-400 mr-1.5"></i>${b.mode}</span>
+                <span class="flex items-center text-brand-navy font-semibold"><i data-lucide="award" class="w-3.5 h-3.5 text-brand-teal mr-1.5"></i>${b.duration}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex items-center space-x-2.5 flex-shrink-0 pt-3 lg:pt-0 border-t lg:border-t-0 border-slate-100">
+            <button onclick="openCourseOutline('${b.title}', '${b.duration}', '${b.standard}')" class="px-4 py-2.5 border border-slate-300 hover:border-brand-teal text-slate-700 hover:text-brand-teal text-xs font-bold rounded-xl transition">
+              Outline
+            </button>
+            <button onclick="openEnrollModal('${b.title} [${b.dates}]', '${b.duration}', '${b.mode}')" class="px-5 py-2.5 bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-bold rounded-xl shadow-sm hover:shadow transition flex items-center space-x-1.5">
+              <span>Book Seat</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+            <a href="https://wa.me/919149010051?text=Hello%20Veritron%20Global,%20I%20want%20to%20register%20for%20the%20${encodeURIComponent(b.standard)}%20batch%20starting%20${encodeURIComponent(b.dates)}." target="_blank" rel="noopener noreferrer" class="p-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-600 rounded-xl transition" title="Ask via WhatsApp">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
 
     // --- Course Catalogue Filtering & Rendering ---
     function setCourseCategory(cat) {
